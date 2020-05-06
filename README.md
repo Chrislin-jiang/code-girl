@@ -64,5 +64,3 @@
 - Gitee：[Chrislinlin](https://gitee.com/chrislinlin)
 
 - 微信：
-
-- 留言：:email: 以后再开通这项功能，目前先专注于知识体系的完善，技术的提升。
