@@ -38,7 +38,7 @@ module.exports = [{
       },
       {
         text: 'React',
-        link: 'https://react.docschina.org/'
+        link: '/framework/react/'
       },
       {
         text: '项目',
