@@ -65,7 +65,7 @@ numbers.insertFirstPosition(-1);
 ### 4. 删除元素
 4.1 在数组末尾删除元素
 ```js
-numbers[length - 1] = null;
+numbers[length - 1] = null; // numbers 的长度没有改变
 numbers.pop();
 ```
 4.2 在数组开头删除元素
