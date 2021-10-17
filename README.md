@@ -1,24 +1,18 @@
-## 介绍
+# code-girl
+### 介绍
+* 这是一个 Vuepress 搭建的文档
+* 最终效果[如风之枫](https://chrislin-jiang.github.io/code-girl/)
 
-这是一个 VuePress 搭建的文档
-
-## 前端知识体系
-
-<img :src="$withBase('/guide/如风之枫的前端知识体系.jpg')" alt="如风之枫的前端知识体系">
-
-## 文档相关
 ### :dart:写文档的目的
-::: tip 
 * :writing_hand:记录自己的学习点滴
 * :1st_place_medal:搭建知识体系
 * :dart:刻意练习
 * :trophy:完善知识体系
 * :cherry_blossom:形成正向反馈
-:::
 
 ### :green_book:文档框架
 
-<img :src="$withBase('/guide/如风之枫的个人博客框架.jpg')" alt="如风之枫的个人博客框架">
+![me](https://img2020.cnblogs.com/blog/1908783/202005/1908783-20200506223844982-1086008657.jpg)
 
 ### :sunflower:风格
 * 每一部分内容首页都有思维导图，用以展示该部分的内容，帮助快速定位知识点
@@ -50,10 +44,22 @@
 * 可能我这个更像是学习记录，并不能算是个人博客
 * 不过它能满足我现阶段需求
 
-:raising_hand_woman:关于我
-* 如果想要进一步了解我，可以:point_right:
-* 如果想和我交个朋友，可以:wink:
+### :hibiscus: 关于我
 
+- 2021 届毕业生
+- 一个渴望技术的工科女
+- 自我驱动能力强，有较强的学习能力
 
+- 坚定目标 
+- 坚持学习
+- 一个养生girl
 
+### 参与社区
 
+- 博客：[博客园-Chrislinlin](https://www.cnblogs.com/chrislinlin/)[掘金-Chrislinlin](https://juejin.im/user/5e0466a4e51d452a6105b83a)
+
+- Github：[Chrislin-jiang](https://github.com/Chrislin-jiang)、
+
+- Gitee：[Chrislinlin](https://gitee.com/chrislinlin)
+
+- 微信：
