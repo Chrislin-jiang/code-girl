@@ -714,16 +714,18 @@ var fourSum = function(nums, target) {
 // 测试
 let nums = [-2, 0, 0, 0, 0, 2];
 console.log(fourSum(nums, 0));
-
-/* 
+/*
 注意这个判断条件
 if (b > a + 1 && nums[b] === nums[b - 1]) continue;
 输出[[-2, 0, 0, 2],[0, 0, 0, 0]]
 if (b > 0 && nums[b] === nums[b - 1]) continue;
 只输出[-2, 0, 0, 2]
  */
+/*
+执行用时：76 ms, 在所有 JavaScript 提交中击败了 97.74% 的用户
+内存消耗：39.9 MB, 在所有 JavaScript 提交中击败了 39.95% 的用户
+ */
 ```
-
 :::
 
 ::: details 参考别人的代码
@@ -1054,6 +1056,23 @@ var canPlaceFlowers = function(flowerbed, n) {
     }
   }
   return max >= n;
+};
+
+// ES6
+var canPlaceFlowers = function(flowerbed, n) {
+  if (n === 0) {
+    return true;
+  } else {
+    let newFlowerbed = [0, ...flowerbed, 0];
+    let count = 0;
+    for (let i = 1; i < newFlowerbed.length - 1; i++) {
+      if ( newFlowerbed[i - 1] === 0 && newFlowerbed[i] === 0 && newFlowerbed[i + 1] === 0 ) {
+        count = count + 1;
+        i++;
+      }
+    }
+    return count >= n;
+  }
 };
 ```
 
