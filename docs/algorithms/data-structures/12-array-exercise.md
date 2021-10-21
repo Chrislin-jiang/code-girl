@@ -561,7 +561,7 @@ const threeSum = function(nums) {
 
 对撞指针可以帮助我们缩小问题的范围，这一点在“三数求和”问题中体现得淋漓尽致：因为数组有序，所以我们可以用两个指针“画地为牢”圈出一个范围，这个范围以外的值不是太大就是太小、直接被排除在我们的判断逻辑之外，这样我们就可以把时间花在真正有意义的计算和对比上。如此一来，不仅节省了计算的时间，更降低了问题本身的复杂度，我们做题的速度也会大大加快。
 
-## 18-四数之和
+## 18-四数之和【中等】
 [leetcode-18](https://leetcode-cn.com/problems/4sum/)
 ::: tip leetcode-18-四数之和
 
@@ -715,7 +715,7 @@ var fourSum = function(nums, target) {
 			if (b - 1 > a && nums[b] === nums[b - 1]) continue;
 			while (c < d) {
 				if (nums[a] + nums[b] + nums[c] + nums[d] === target) {
-					result.push([nums[i], nums[b], nums[c], nums[d]]);
+					result.push([nums[a], nums[b], nums[c], nums[d]]);
 					while (c < d && nums[c] === nums[c + 1]) {
 						c++;
 					}
@@ -740,7 +740,11 @@ var fourSum = function(nums, target) {
 	}
 	return result;
 }
-
+/*
+执行结果：通过
+执行用时：84 ms, 在所有 JavaScript 提交中击败了 89.10% 的用户
+内存消耗：39.9 MB, 在所有 JavaScript 提交中击败了 43.41% 的用户
+ */
 ```
 :::
 
