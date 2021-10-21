@@ -1,41 +1,47 @@
 /**
- * @param {number[]} flowerbed
- * @param {number} n
+ * @param {number[]} deck
  * @return {boolean}
-
-示例 1:
-输入: flowerbed = [1,0,0,0,1], n = 1
-输出: True
-示例 2:
-输入: flowerbed = [1,0,0,0,1], n = 2
-输入: flowerbed = [0,0,0,0,0,0,1], n = 2
-输出: False
+ * [1,2,3,4,4,3,2,1]
+ * [1,1,1,2,2,2,3,3]
+ * [1,1,1,2,2,2,3,3]
  */
-var canPlaceFlowers = function (flowerbed, n) {
-  let max = 0, len = flowerbed.length
-  // 考虑一些极端情况
-  if (len === 0) {
-    return 'False'
-  }
-  else if (len === 1) {
-    return n === 1 ? 'True' : 'False'
+var hasGroupsSizeX = function(deck) {
+  if (deck.length === 1) {
+    return false;
   } else {
-    for (let i = 0; i < len; i++) {
-      if (i === 0 && flowerbed[i] === 0 && flowerbed[i + 1] === 0) {
-        max = max + 1
-        i++
-      } else if (i === len - 1 && flowerbed[len - 1] === 0 && flowerbed[len - 2] === 0) {
-        max = max + 1
-        i++
+    deck.sort((a, b) => a - b);
+    let count = 0;
+    let temp = 1;
+    for (let i = 1; i < deck.length; i++) {
+      if (deck[i] === deck[i - 1]) {
+        temp = temp + 1;
       } else {
-        if (flowerbed[i] === 0 && flowerbed[i - 1] === 0 && flowerbed[i + 1]) {
-          max = max + 1
-          i++
+        if (count === 0) {
+          count = temp;
+        }
+        if (temp >= count && temp % count === 0) {
+          temp = 1;
+        } else if (temp < count && count % temp === 0) {
+          count = temp;
+          temp = 1;
         } else {
-          continue
+          continue;
         }
       }
     }
+    if (count === 0) {
+      return true;
+    } else {
+      if (temp >= count && temp % count === 0) {
+        return true;
+      } else if (temp < count && count % temp === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
-  return max >= n ? 'True' : 'False'
 };
+
+// 这个方法不行
+// [1,1,1,1,2,2,2,2,2,2]   temp=6，count=4，但是 n 可以取 2
