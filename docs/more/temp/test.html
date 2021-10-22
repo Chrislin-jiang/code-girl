@@ -5,33 +5,8 @@
   <meta charset="utf-8">
   <title></title>
   <style>
-    /* .div1{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    } */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    .wrapper {
-      margin: 60px;
-      /* 声明一个容器 */
-      display: grid;
-      /*  声明列的宽度  */
-      grid-template-columns: repeat(11, 200px);
-      /*  声明行间距和列间距  */
-      grid-gap: 20px;
-      /*  声明行的高度  */
-      grid-template-rows: 100px 200px;
-    }
-
-    .item {
-      text-align: center;
-      font-size: 200%;
-      color: #fff;
-      background-color: bisque;
+    tbody:nth-child(1) {
+      display: none;
     }
   </style>
 </head>
@@ -42,259 +17,229 @@
   <body>
     <h2>开机广告策略引擎前一天曝光信息</h2>
     <h3>前一天所有 aeid 的曝光信息</h3>
-    <div>
-      <div class="wrapper">
-        <div class="item">aeid</div>
-        <div class="item">adid</div>
-        <div class="item">优先级</div>
-        <div class="item">目标曝光量</div>
-        <div class="item">已曝光量</div>
-        <div class="item">目标点击量</div>
-        <div class="item">已点击量</div>
-        <div class="item">当前期待量</div>
-        <div class="item">预期量gap值</div>
-        <div class="item">策略引擎下发量</div>
-        <div class="item">策略引擎点击量</div>
-      </div>
-    </div>
-    <div>
-      <h3>前一天所有 aeid 的曝光信息</h3>
-      <table border="1" cellpadding="10" bordercolor="black" style="border-collapse:collapse">
-        <tr>
-          <th>aeid</th>
-          <th>adid</th>
-          <th>优先级</th>
-          <th>目标曝光量</th>
-          <th>已曝光量</th>
-          <th>目标点击量</th>
-          <th>已点击量</th>
-          <th>当前期待量</th>
-          <th>预期量gap值</th>
-          <th>策略引擎下发量</th>
-          <th>策略引擎点击量</th>
-        </tr>
-      </table><br><br>
-    </div>
     <div class="div1">
-      <table border="1" cellpadding="10" bordercolor="black">
-        <caption>这是表格的标题</caption>
-        <tr>
-          <th>aeid</th>
-          <th>adid</th>
-          <th>优先级</th>
-          <th>目标曝光量</th>
-          <th>已曝光量</th>
-          <th>目标点击量</th>
-          <th>已点击量</th>
-          <th>当前期待量</th>
-          <th>预期量gap值</th>
-          <th>策略引擎下发量</th>
-          <th>策略引擎点击量</th>
-        </tr>
-        <tr>
-          <td>10048466_2021-10-21</td>
-          <td>ad_617064dae73c5;ad_617064dae73fe</td>
-          <td>8</td>
-          <td>26124914</td>
-          <td>27010891</td>
-          <td>0</td>
-          <td>422326</td>><td>26124914</td>
-          <td>3.390000%</td>
-          <td>25391289</td>
-          <td>22283820</td>
-        </tr>
-        <tr>
-          <td>KA-P-48537_2021-10-21</td>
-          <td>ad_61716231b1a74;ad_6171621ade967</td>
-          <td>99</td>
-          <td>2000000</td>
-          <td>3</td>
-          <td>0</td>
-          <td>3</td>><td>2000000</td>
-          <td>-100.000000%</td>
-          <td>4</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>10048547</td>
-          <td>ad_616e57daa661e;ad_616e57daa669b;ad_616e57daa65df;ad_616e57daa665c</td>
-          <td>8</td>
-          <td>20000000</td>
-          <td>21599946</td>
-          <td>0</td>
-          <td>102090</td>><td>20000000</td>
-          <td>8.000000%</td>
-          <td>7950958</td>
-          <td>6571329</td>
-        </tr>
-        <tr>
-          <td>10048589_2021-10-21</td>
-          <td>ad_616e9e52dd9e9;ad_616e9e52dd9a7</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>29132961</td>
-          <td>0</td>
-          <td>174815</td>><td>28000000</td>
-          <td>4.050000%</td>
-          <td>24186774</td>
-          <td>20579833</td>
-        </tr>
-        <tr>
-          <td>10048478_2021-10-21</td>
-          <td>ad_616d40f1a915f;ad_616d40f1a919d</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>29118638</td>
-          <td>0</td>
-          <td>165212</td>><td>28000000</td>
-          <td>4.000000%</td>
-          <td>23563981</td>
-          <td>19989659</td>
-        </tr>
-        <tr>
-          <td>12345abcde</td>
-          <td>ad_610288d244d65;ad_616ab70b1b0f5;ad_616ab85a0ddeb</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>28894353</td>
-          <td>0</td>
-          <td>289228</td>><td>28000000</td>
-          <td>3.190000%</td>
-          <td>19993793</td>
-          <td>17438395</td>
-        </tr>
-        <tr>
-          <td>10048623</td>
-          <td>ad_616fbe9de8972;ad_616fbe9de8938;ad_616fbe9de89a9;ad_616fbe9de89e0</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>23101586</td>
-          <td>0</td>
-          <td>145649</td>><td>28000000</td>
-          <td>-17.490000%</td>
-          <td>14307272</td>
-          <td>10846049</td>
-        </tr>
-        <tr>
-          <td>10048674</td>
-          <td>ad_6170440be72cd;ad_6170440be728d</td>
-          <td>5</td>
-          <td>20000000</td>
-          <td>20829270</td>
-          <td>0</td>
-          <td>331042</td>><td>20000000</td>
-          <td>4.150000%</td>
-          <td>14866135</td>
-          <td>13376825</td>
-        </tr>
-        <tr>
-          <td>10048570</td>
-          <td>ad_616e820a347f8;ad_616e820a34838;ad_616e820a34874;ad_616e820a348b0</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>24082882</td>
-          <td>0</td>
-          <td>354368</td>><td>28000000</td>
-          <td>-13.990000%</td>
-          <td>16065392</td>
-          <td>9838314</td>
-        </tr>
-        <tr>
-          <td>10048564</td>
-          <td>ad_616f7cd658c55;ad_616f7cd658be4;ad_616f7cd658ba9;ad_616f7cd658c1d</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>22422365</td>
-          <td>0</td>
-          <td>149050</td>><td>28000000</td>
-          <td>-19.920000%</td>
-          <td>15378888</td>
-          <td>10705179</td>
-        </tr>
-        <tr>
-          <td>10048626</td>
-          <td>ad_616f8f917ee8c;ad_616f8f917ee51</td>
-          <td>5</td>
-          <td>28000000</td>
-          <td>28931223</td>
-          <td>0</td>
-          <td>153116</td>><td>28000000</td>
-          <td>3.330000%</td>
-          <td>24662438</td>
-          <td>19391979</td>
-        </tr>
-        <tr>
-          <td>10048666_2021-10-21</td>
-          <td>ad_616ffb61dd16a;ad_616ffb61dd1a5</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>29005102</td>
-          <td>0</td>
-          <td>196878</td>><td>28000000</td>
-          <td>3.590000%</td>
-          <td>25081082</td>
-          <td>21869170</td>
-        </tr>
-        <tr>
-          <td>10048415_2021-10-21</td>
-          <td>ad_616c19a1506c4;ad_616c19a150701</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>29300374</td>
-          <td>0</td>
-          <td>462793</td>><td>28000000</td>
-          <td>4.640000%</td>
-          <td>24140139</td>
-          <td>20002085</td>
-        </tr>
-        <tr>
-          <td>10048387</td>
-          <td>ad_616a86ac1e28f;ad_616a86ac1e33a;ad_616a86ac1e2c9;ad_616a86ac1e302</td>
-          <td>8</td>
-          <td>28000000</td>
-          <td>23343973</td>
-          <td>0</td>
-          <td>423112</td>><td>28000000</td>
-          <td>-16.630000%</td>
-          <td>11789626</td>
-          <td>6139484</td>
-        </tr>
-        <tr>
-          <td>10048593</td>
-          <td>ad_616eb34e6b212;ad_616eb34e6b1a8;ad_616eb34e6b16c;ad_616eb34e6b1db</td>
-          <td>8</td>
-          <td>20000000</td>
-          <td>22265526</td>
-          <td>0</td>
-          <td>345034</td>><td>20000000</td>
-          <td>11.330000%</td>
-          <td>10637473</td>
-          <td>8385373</td>
-        </tr>
-        <tr>
-          <td>10048444</td>
-          <td>ad_616d1b8e37110;ad_616d1b8e37094;ad_616d1b8e37058;ad_616d1b8e370d1</td>
-          <td>8</td>
-          <td>10000000</td>
-          <td>15614310</td>
-          <td>0</td>
-          <td>67937</td>><td>10000000</td>
-          <td>56.140000%</td>
-          <td>248</td>
-          <td>187</td>
-        </tr>
-        <tr>
-          <td>total</td>
-          <td>total</td>
-          <td>0</td>
-          <td>378124914</td>
-          <td>374653403</td>
-          <td>0</td>
-          <td>3782653</td>><td>0</td>
-          <td>0.000000%</td>
-          <td>258015492</td>
-          <td>207417684</td>
-        </tr>
+      <h3>111111</h3>
+      <table border="1" cellpadding="10" bordercolor="black" style="border-collapse:collapse">
+        <tbody>
+          <h3>2222222222</h3>
+          <tr>
+            <th>aeid</th>
+            <th>adid</th>
+            <th>优先级</th>
+            <th>目标曝光量</th>
+            <th>已曝光量</th>
+            <th>目标点击量</th>
+            <th>已点击量</th>
+            <th>当前期待量</th>
+            <th>预期量gap值</th>
+            <th>策略引擎下发量</th>
+            <th>策略引擎点击量</th>
+          </tr>
+          <tr>
+            <td>10048466_2021-10-21</td>
+            <td>ad_617064dae73c5;ad_617064dae73fe</td>
+            <td>8</td>
+            <td>26124914</td>
+            <td>27010891</td>
+            <td>0</td>
+            <td>422326</td>><td>26124914</td>
+            <td>3.390000%</td>
+            <td>25391289</td>
+            <td>22283820</td>
+          </tr>
+          <tr>
+            <td>KA-P-48537_2021-10-21</td>
+            <td>ad_61716231b1a74;ad_6171621ade967</td>
+            <td>99</td>
+            <td>2000000</td>
+            <td>3</td>
+            <td>0</td>
+            <td>3</td>><td>2000000</td>
+            <td>-100.000000%</td>
+            <td>4</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>10048547</td>
+            <td>ad_616e57daa661e;ad_616e57daa669b;ad_616e57daa65df;ad_616e57daa665c</td>
+            <td>8</td>
+            <td>20000000</td>
+            <td>21599946</td>
+            <td>0</td>
+            <td>102090</td>><td>20000000</td>
+            <td>8.000000%</td>
+            <td>7950958</td>
+            <td>6571329</td>
+          </tr>
+          <tr>
+            <td>10048589_2021-10-21</td>
+            <td>ad_616e9e52dd9e9;ad_616e9e52dd9a7</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>29132961</td>
+            <td>0</td>
+            <td>174815</td>><td>28000000</td>
+            <td>4.050000%</td>
+            <td>24186774</td>
+            <td>20579833</td>
+          </tr>
+          <tr>
+            <td>10048478_2021-10-21</td>
+            <td>ad_616d40f1a915f;ad_616d40f1a919d</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>29118638</td>
+            <td>0</td>
+            <td>165212</td>><td>28000000</td>
+            <td>4.000000%</td>
+            <td>23563981</td>
+            <td>19989659</td>
+          </tr>
+          <tr>
+            <td>12345abcde</td>
+            <td>ad_610288d244d65;ad_616ab70b1b0f5;ad_616ab85a0ddeb</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>28894353</td>
+            <td>0</td>
+            <td>289228</td>><td>28000000</td>
+            <td>3.190000%</td>
+            <td>19993793</td>
+            <td>17438395</td>
+          </tr>
+          <tr>
+            <td>10048623</td>
+            <td>ad_616fbe9de8972;ad_616fbe9de8938;ad_616fbe9de89a9;ad_616fbe9de89e0</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>23101586</td>
+            <td>0</td>
+            <td>145649</td>><td>28000000</td>
+            <td>-17.490000%</td>
+            <td>14307272</td>
+            <td>10846049</td>
+          </tr>
+          <tr>
+            <td>10048674</td>
+            <td>ad_6170440be72cd;ad_6170440be728d</td>
+            <td>5</td>
+            <td>20000000</td>
+            <td>20829270</td>
+            <td>0</td>
+            <td>331042</td>><td>20000000</td>
+            <td>4.150000%</td>
+            <td>14866135</td>
+            <td>13376825</td>
+          </tr>
+          <tr>
+            <td>10048570</td>
+            <td>ad_616e820a347f8;ad_616e820a34838;ad_616e820a34874;ad_616e820a348b0</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>24082882</td>
+            <td>0</td>
+            <td>354368</td>><td>28000000</td>
+            <td>-13.990000%</td>
+            <td>16065392</td>
+            <td>9838314</td>
+          </tr>
+          <tr>
+            <td>10048564</td>
+            <td>ad_616f7cd658c55;ad_616f7cd658be4;ad_616f7cd658ba9;ad_616f7cd658c1d</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>22422365</td>
+            <td>0</td>
+            <td>149050</td>><td>28000000</td>
+            <td>-19.920000%</td>
+            <td>15378888</td>
+            <td>10705179</td>
+          </tr>
+          <tr>
+            <td>10048626</td>
+            <td>ad_616f8f917ee8c;ad_616f8f917ee51</td>
+            <td>5</td>
+            <td>28000000</td>
+            <td>28931223</td>
+            <td>0</td>
+            <td>153116</td>><td>28000000</td>
+            <td>3.330000%</td>
+            <td>24662438</td>
+            <td>19391979</td>
+          </tr>
+          <tr>
+            <td>10048666_2021-10-21</td>
+            <td>ad_616ffb61dd16a;ad_616ffb61dd1a5</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>29005102</td>
+            <td>0</td>
+            <td>196878</td>><td>28000000</td>
+            <td>3.590000%</td>
+            <td>25081082</td>
+            <td>21869170</td>
+          </tr>
+          <tr>
+            <td>10048415_2021-10-21</td>
+            <td>ad_616c19a1506c4;ad_616c19a150701</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>29300374</td>
+            <td>0</td>
+            <td>462793</td>><td>28000000</td>
+            <td>4.640000%</td>
+            <td>24140139</td>
+            <td>20002085</td>
+          </tr>
+          <tr>
+            <td>10048387</td>
+            <td>ad_616a86ac1e28f;ad_616a86ac1e33a;ad_616a86ac1e2c9;ad_616a86ac1e302</td>
+            <td>8</td>
+            <td>28000000</td>
+            <td>23343973</td>
+            <td>0</td>
+            <td>423112</td>><td>28000000</td>
+            <td>-16.630000%</td>
+            <td>11789626</td>
+            <td>6139484</td>
+          </tr>
+          <tr>
+            <td>10048593</td>
+            <td>ad_616eb34e6b212;ad_616eb34e6b1a8;ad_616eb34e6b16c;ad_616eb34e6b1db</td>
+            <td>8</td>
+            <td>20000000</td>
+            <td>22265526</td>
+            <td>0</td>
+            <td>345034</td>><td>20000000</td>
+            <td>11.330000%</td>
+            <td>10637473</td>
+            <td>8385373</td>
+          </tr>
+          <tr>
+            <td>10048444</td>
+            <td>ad_616d1b8e37110;ad_616d1b8e37094;ad_616d1b8e37058;ad_616d1b8e370d1</td>
+            <td>8</td>
+            <td>10000000</td>
+            <td>15614310</td>
+            <td>0</td>
+            <td>67937</td>><td>10000000</td>
+            <td>56.140000%</td>
+            <td>248</td>
+            <td>187</td>
+          </tr>
+          <tr>
+            <td>total</td>
+            <td>total</td>
+            <td>0</td>
+            <td>378124914</td>
+            <td>374653403</td>
+            <td>0</td>
+            <td>3782653</td>><td>0</td>
+            <td>0.000000%</td>
+            <td>258015492</td>
+            <td>207417684</td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <br /><br />
