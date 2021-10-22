@@ -14,6 +14,25 @@
       border-collapse: collapse;
       width: 100%;
     }
+
+    .wrapper {
+      margin: 60px;
+      /* 声明一个容器 */
+      display: grid;
+      /*  声明列的宽度  */
+      grid-template-columns: repeat(11, 200px);
+      /*  声明行间距和列间距  */
+      grid-gap: 20px;
+      /*  声明行的高度  */
+      grid-template-rows: 100px 200px;
+    }
+
+    .item {
+      text-align: center;
+      font-size: 200%;
+      color: #fff;
+      background-color: bisque;
+    }
   </style>
 </head>
 
@@ -24,19 +43,19 @@
     <h2>开机广告策略引擎前一天曝光信息</h2>
     <h3>前一天所有 aeid 的曝光信息</h3>
     <div>
-      <ul>
-        <li>aeid</li>
-        <li>adid</li>
-        <li>优先级</li>
-        <li>目标曝光量</li>
-        <li>已曝光量</li>
-        <li>目标点击量</li>
-        <li>已点击量</li>
-        <li>当前期待量</li>
-        <li>预期量gap值</li>
-        <li>策略引擎下发量</li>
-        <li>策略引擎点击量</li>
-      </ul>
+      <div class="wrapper">
+        <div class="item">aeid</div>
+        <div class="item">adid</div>
+        <div class="item">优先级</div>
+        <div class="item">目标曝光量</div>
+        <div class="item">已曝光量</div>
+        <div class="item">目标点击量</div>
+        <div class="item">已点击量</div>
+        <div class="item">当前期待量</div>
+        <div class="item">预期量gap值</div>
+        <div class="item">策略引擎下发量</div>
+        <div class="item">策略引擎点击量</div>
+      </div>
     </div>
     <div>
       <h3>前一天所有 aeid 的曝光信息</h3>
