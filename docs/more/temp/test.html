@@ -4,6 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <style>
+    /* .div1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    } */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,7 +24,41 @@
     <h2>开机广告策略引擎前一天曝光信息</h2>
     <h3>前一天所有 aeid 的曝光信息</h3>
     <div>
+      <ul>
+        <li>aeid</li>
+        <li>adid</li>
+        <li>优先级</li>
+        <li>目标曝光量</li>
+        <li>已曝光量</li>
+        <li>目标点击量</li>
+        <li>已点击量</li>
+        <li>当前期待量</li>
+        <li>预期量gap值</li>
+        <li>策略引擎下发量</li>
+        <li>策略引擎点击量</li>
+      </ul>
+    </div>
+    <div>
+      <h3>前一天所有 aeid 的曝光信息</h3>
       <table border="1" cellpadding="10" bordercolor="black" style="border-collapse:collapse">
+        <tr>
+          <th>aeid</th>
+          <th>adid</th>
+          <th>优先级</th>
+          <th>目标曝光量</th>
+          <th>已曝光量</th>
+          <th>目标点击量</th>
+          <th>已点击量</th>
+          <th>当前期待量</th>
+          <th>预期量gap值</th>
+          <th>策略引擎下发量</th>
+          <th>策略引擎点击量</th>
+        </tr>
+      </table><br><br>
+    </div>
+    <div class="div1">
+      <table border="1" cellpadding="10" bordercolor="black">
+        <caption>这是表格的标题</caption>
         <tr>
           <th>aeid</th>
           <th>adid</th>
