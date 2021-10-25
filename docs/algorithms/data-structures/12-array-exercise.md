@@ -1131,6 +1131,7 @@ var letterCombinations = function(digits) {
 ::: details Possible solutions
 
 ```js
+回溯
 ```
 
 :::
@@ -1176,7 +1177,7 @@ var letterCombinations = function(digits) {
 输入: 0
 输出: [0]
 解释: 我们定义格雷编码序列必须以 0 开头。
-     给定编码总位数为 n 的格雷编码序列，其长度为 2n。当 n = 0 时，长度为 20 = 1。
+     给定编码总位数为 n 的格雷编码序列，其长度为 2^n。当 n = 0 时，长度为 2^0 = 1。
      因此，当 n = 0 时，其格雷编码序列为 [0]。
 ```
 
@@ -1295,6 +1296,7 @@ var moveZeroes = function(nums) {
     }
   }
 };
+// i !== j 这个判断条件，主要是考虑数组第一个元素可能非0?
 ```
 
 稍稍改造一下：
@@ -1308,10 +1310,6 @@ var moveZeroes = function(nums) {
   let j = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
-      // nums[j] = nums[i];
-      // if (i !== j) {
-      // 	nums[i] = 0;
-      // }
       if (i !== j) {
         [nums[i], nums[j]] = [nums[j], nums[i]];
       }
@@ -1346,7 +1344,7 @@ var maxArea = function(height) {};
 
 1. 枚举 O(n^2)
 2. 左右夹逼，设置左右边界 i,j 向中间收敛 O(n)
-   :::
+:::
 
 ### 题解
 
