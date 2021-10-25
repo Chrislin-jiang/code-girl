@@ -837,6 +837,63 @@ var hasGroupsSizeX = function(deck) {};
 #### 解法一
 
 ::: details
+lin
+
+```js
+/**
+ * @param {number[]} deck
+ * @return {boolean}
+ */
+const hasGroupsSizeX = function(deck) {
+  if (deck.length === 1) {
+    return false;
+  } else {
+    // 最大公约数
+    const gcdFn = (a, b) => {
+      // 利用辗转相除法来计算最大公约数
+      let c = a % b;
+      if (c === 0) return b;
+      return gcdFn(b, c);
+    };
+    deck.sort((a, b) => a - b);
+    let count = 1;
+    let gcd;
+    for (let i = 1; i < deck.length; i++) {
+      if (deck[i] === deck[i - 1]) {
+        count++;
+      } else {
+        if (count === 1) {
+          return false;
+        } else {
+          if (gcd === undefined) {
+            gcd = count;
+          } else {
+            gcd = gcdFn(gcd, count);
+          }
+          count = 1;
+        }
+      }
+    }
+    // 最后
+    if (gcd === undefined) {
+      gcd = count;
+    } else {
+      gcd = gcdFn(gcd, count);
+    }
+    if (gcd >= 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+```
+
+:::
+
+#### 解法二
+
+::: details
 
 ```js
 /**
@@ -872,7 +929,7 @@ var hasGroupsSizeX = function(deck) {
 
 :::
 
-#### 解法二
+#### 解法三
 
 ::: details
 {} + 最大公约数
@@ -1284,6 +1341,7 @@ var moveZeroes = function(nums) {
 
 ```js
 1. 定义一个指针 j，让它从数组左边开始移动；当遍历数组的时候，发现某个值不等于0，同时满足 i !== j 就让 nums[j] 与 nums[i] 交换位置，j++
+// 1. 定义一个指针 j，让它从数组左边开始移动；当遍历数组的时候，发现某个值不等于0，就让 nums[j] = nums[i]，如果 i !== j, nums[i] = 0, j++
 ```
 
 :::

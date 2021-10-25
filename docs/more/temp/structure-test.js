@@ -2,7 +2,7 @@
  * @param {number[]} deck
  * @return {boolean}
  */
- const hasGroupsSizeX = function(deck) {
+const hasGroupsSizeX = function(deck) {
   if (deck.length === 1) {
     return false;
   } else {
