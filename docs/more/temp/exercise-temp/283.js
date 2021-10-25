@@ -12,15 +12,16 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const moveZeroes = (nums) => {
-  let j = 0
+  let j = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
-      nums[j] = nums[i]
-      // i !== j 这个判断条件，主要是考虑数组第一个元素非0?
-      if (i !== j) {
-        nums[i] = 0
-      }
-      j++
+      // nums[j] = nums[i]
+      // // i !== j 这个判断条件，主要是考虑数组第一个元素非0?
+      // if (i !== j) {
+      //   nums[i] = 0
+      // }
+      [nums[i], nums[j]] = [nums[j], nums[i]];
+      j++;
     }
   }
 };
