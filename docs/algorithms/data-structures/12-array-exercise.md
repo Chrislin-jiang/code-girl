@@ -838,7 +838,7 @@ var hasGroupsSizeX = function(deck) {};
 
 ::: details
 lin
-
+排序+最大公约数
 ```js
 /**
  * @param {number[]} deck
@@ -1098,24 +1098,6 @@ var canPlaceFlowers = function(flowerbed, n) {
  * @param {number} n
  * @return {boolean}
  */
-var canPlaceFlowers = function(flowerbed, n) {
-  let max = 0;
-  // 左右边界都补充 0，不用考虑边界问题
-  flowerbed.push(0);
-  flowerbed.unshift(0);
-  for (let i = 1, len = flowerbed.length - 1; i < len; i++) {
-    if (
-      flowerbed[i] === 0 &&
-      flowerbed[i - 1] === 0 &&
-      flowerbed[i + 1] === 0
-    ) {
-      max++;
-      i++;
-    }
-  }
-  return max >= n;
-};
-
 // ES6
 var canPlaceFlowers = function(flowerbed, n) {
   if (n === 0) {
@@ -1135,6 +1117,24 @@ var canPlaceFlowers = function(flowerbed, n) {
     }
     return count >= n;
   }
+};
+// 类似
+var canPlaceFlowers = function(flowerbed, n) {
+  let max = 0;
+  // 左右边界都补充 0，不用考虑边界问题
+  flowerbed.push(0);
+  flowerbed.unshift(0);
+  for (let i = 1, len = flowerbed.length - 1; i < len; i++) {
+    if (
+      flowerbed[i] === 0 &&
+      flowerbed[i - 1] === 0 &&
+      flowerbed[i + 1] === 0
+    ) {
+      max++;
+      i++;
+    }
+  }
+  return max >= n;
 };
 ```
 
