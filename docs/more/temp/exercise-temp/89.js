@@ -51,7 +51,7 @@ const grayCode = function (n) {
   let res = [0], right
   for (let i = 1; i <= n; i++) {
     right = [...res].reverse().map((ele) => ele + Math.pow(2, i - 1))
-    res = [...res, right]
+    res = [...res, ...right]
   }
   return res
 };
