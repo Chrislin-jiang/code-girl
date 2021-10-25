@@ -726,6 +726,7 @@ if (b > 0 && nums[b] === nums[b - 1]) continue;
 内存消耗：39.9 MB, 在所有 JavaScript 提交中击败了 39.95% 的用户
  */
 ```
+
 :::
 
 ::: details 参考别人的代码
@@ -1066,7 +1067,11 @@ var canPlaceFlowers = function(flowerbed, n) {
     let newFlowerbed = [0, ...flowerbed, 0];
     let count = 0;
     for (let i = 1; i < newFlowerbed.length - 1; i++) {
-      if ( newFlowerbed[i - 1] === 0 && newFlowerbed[i] === 0 && newFlowerbed[i + 1] === 0 ) {
+      if (
+        newFlowerbed[i - 1] === 0 &&
+        newFlowerbed[i] === 0 &&
+        newFlowerbed[i + 1] === 0
+      ) {
         count = count + 1;
         i++;
       }
@@ -1131,7 +1136,7 @@ var letterCombinations = function(digits) {
 ::: details Possible solutions
 
 ```js
-回溯
+回溯;
 ```
 
 :::
@@ -1229,13 +1234,14 @@ var grayCode = function(n) {
   return res;
 };
 // 稍稍改造一下
-const grayCode = function (n) {
-  let res = [0], right
+const grayCode = function(n) {
+  let res = [0],
+    right;
   for (let i = 1; i <= n; i++) {
-    right = [...res].reverse().map((ele) => ele + Math.pow(2, i - 1))
-    res = [...res, ...right]
+    right = [...res].reverse().map((ele) => ele + Math.pow(2, i - 1));
+    res = [...res, ...right];
   }
-  return res
+  return res;
 };
 ```
 
@@ -1353,7 +1359,7 @@ var maxArea = function(height) {};
 
 1. 枚举 O(n^2)
 2. 左右夹逼，设置左右边界 i,j 向中间收敛 O(n)
-:::
+   :::
 
 ### 题解
 
