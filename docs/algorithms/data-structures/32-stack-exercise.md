@@ -31,6 +31,20 @@ function decimalToBinary(decNumber) {
 	}
 	return binaryString;
 }
+// 2
+const decimalToBinary = (decNumber) => {
+    let temp = [], res = ''
+    while (decNumber > 0) {
+        temp.push(decNumber % 2)
+        // 注意：Math.floor
+        decNumber = Math.floor(decNumber / 2)
+    }
+    while (temp.length !== 0) {
+        // 注意：toString()
+        res = res + temp.pop().toString()
+    }
+    return res
+}
 ```
 :::
 
@@ -61,6 +75,24 @@ function baseConverter(decNumber, base) {
 	
 	return baseString;
 }
+// 2
+const baseConverter = (decNumber, base) => {
+  if (Number.isInteger(base) && base >= 2 && base <= 36) {
+    let temp = [], res = ''
+    const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    while (decNumber > 0) {
+      temp.push(digits[decNumber % base])
+      decNumber = Math.floor(decNumber / base)
+    }
+    while (temp.length !== 0) {
+      res = res + temp.pop().toString()
+    }
+    return res
+  } else {
+    return ''
+  }
+}
+console.log(baseConverter(31, 1));
 ```
 
 
