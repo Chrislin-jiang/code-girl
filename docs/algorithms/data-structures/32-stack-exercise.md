@@ -188,6 +188,27 @@ const isValid = function(str) {
   // 若所有的括号都能配对成功，那么最后栈应该是空的
   return !stack.length;
 };
+// 2
+const isValid = (s) => {
+  if (s.length % 2 !== 0) {
+    return false;
+  } else {
+    let stack = [];
+    let map = { "{": "}", "[": "]", "(": ")" };
+    for (let i = 0; i < s.length; i++) {
+      if (map[s[i]]) {
+        stack.push(map[s[i]]);
+      } else {
+        if (stack[stack.length - 1] === s[i]) {
+          stack.pop();
+        } else {
+          return false;
+        }
+      }
+    }
+    return stack.length === 0;
+  }
+};
 ```
 
 :::
