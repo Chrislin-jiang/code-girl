@@ -260,7 +260,7 @@ false
 - 2020.05.03
   :::
 
-## 739-每日温度
+## 739-每日温度【中等】
 
 ::: tip 题目描述:
 根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。
@@ -290,11 +290,11 @@ var dailyTemperatures = function(T) {
 1. 暴力求解 O(N^2)
 
 - 两层循环，第一层定位一个温度，
-- 第二层定位离这个温度最近的一次升温是哪天，求出两个温度对应索引的差值。
+- 第二层定位离这个温度最近的一次升温是哪天，求出两个温度对应**索引的差值**。
 
 2. 利用栈结构进行求解 O(N)
 
-- 尝试维持一个递减栈
+- 尝试维持一个**递减栈**，**存放索引**
   :::
 
 ### 题解
@@ -329,6 +329,29 @@ const dailyTemperatures = function(T) {
 执行用时 :1048 ms, 在所有 JavaScript 提交中击败了20.58%的用户
 内存消耗 :42.3 MB, 在所有 JavaScript 提交中击败了100.00%的用户
  */
+// 2
+const dailyTemperatures = function(temperatures) {
+  let res = [];
+  for (let i = 0; i < temperatures.length - 1; i++) {
+    let count = 0,
+      isHigh = false;
+    for (let j = i + 1; j < temperatures.length; j++) {
+      if (temperatures[j] > temperatures[i]) {
+        isHigh = true;
+        count++;
+        break;
+      }
+      count++;
+    }
+    if (isHigh) {
+      res.push(count);
+    } else {
+      res.push(0);
+    }
+  }
+  res.push(0);
+  return res;
+};
 ```
 
 :::
@@ -371,8 +394,11 @@ const dailyTemperatures = function(T) {
 利用堆栈，还可以解决如下常见问题：
 
 - 求解算术表达式的结果（LeetCode 224、227、772、770)
+  - 未做
 - 求解直方图里最大的矩形区域（LeetCode 84）
-  :::
+  - 未做
+
+:::
 
 ## 155-最小栈
 
@@ -442,6 +468,9 @@ MinStack.prototype.getMin = function() {
 
 :::
 
+题目来源：
+[leetcode-155 最小栈](https://leetcode-cn.com/problems/min-stack/)
+
 ### 思路分析
 
 ::: details
@@ -466,6 +495,7 @@ MinStack.prototype.getMin = function() {
 要使得 getMin() 操作的时间复杂度是常数级的，可以有以下几种方法
 
 - 基栈 + 辅助栈
+  - 额外维护一个最小值栈，初始化为第一个元素，用来保存历史最小值集合
 - 一个栈，增加一个 min 变量来保存最小值
   这个方法要注意的问题，举个例子，如果把 min 更新为 2，那么之前的最小值 3 就丢失了，当执行 pop 操作后，如果正好把 2 弹出，min 不是 2，如何更新 min
 
@@ -493,6 +523,7 @@ const MinStack = function() {
 MinStack.prototype.push = function(x) {
   this.stack.push(x);
   // 若入栈的值小于当前最小值，则推入辅助栈栈顶
+	// this.stack2[this.stack2.length - 1] >= x，注意这里是 >=
   if (this.stack2.length == 0 || this.stack2[this.stack2.length - 1] >= x) {
     this.stack2.push(x);
   }
@@ -619,7 +650,8 @@ queue.empty(); // 返回 false
 
 - 用两个栈来实现队列
 - 待完善
-  :::
+
+:::
 
 ### 题解
 

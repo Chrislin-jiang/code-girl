@@ -1,17 +1,48 @@
-/**
- * @param {number[]} temperatures
- * @return {number[]}
- */
-const dailyTemperatures = function(temperatures) {
-  let res = new Array(temperatures.length).fill(0);
-  // 维护一个递减栈
-  let stack = [];
-  for (let i = 0; i < temperatures.length; i++) {
-    while (stack.length && temperatures[i] > temperatures[stack[stack.length - 1]]) {
-      const top = stack.pop();
-      res[top] = i - top;
-    }
-    stack.push(i);
-  }
-  return res;
+const MinStack = function() {
+  this.stack = [];
+  this.min = Number.MAX_SAFE_INTEGER;
 };
+
+/**
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function(val) {
+  if (val <= this.min) {
+    this.stack.push(this.min);
+    this.min = val;
+  }
+  this.stack.push(val);
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+  let temp = this.stack.pop();
+  if (temp === this.min) {
+    this.min = this.stack.pop();
+  }
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+  return this.stack[this.stack.length - 1];
+};
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+  return this.min;
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * var obj = new MinStack()
+ * obj.push(val)
+ * obj.pop()
+ * var param_3 = obj.top()
+ * var param_4 = obj.getMin()
+ */
