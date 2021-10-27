@@ -1,17 +1,17 @@
-const baseConverter = (decNumber, base) => {
-  if (Number.isInteger(base) && base >= 2 && base <= 36) {
-    let temp = [], res = ''
-    const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    while (decNumber > 0) {
-      temp.push(digits[decNumber % base])
-      decNumber = Math.floor(decNumber / base)
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+const dailyTemperatures = function(temperatures) {
+  let res = new Array(temperatures.length).fill(0);
+  // 维护一个递减栈
+  let stack = [];
+  for (let i = 0; i < temperatures.length; i++) {
+    while (stack.length && temperatures[i] > temperatures[stack[stack.length - 1]]) {
+      const top = stack.pop();
+      res[top] = i - top;
     }
-    while (temp.length !== 0) {
-      res = res + temp.pop().toString()
-    }
-    return res
-  } else {
-    return ''
+    stack.push(i);
   }
-}
-console.log(baseConverter(31, 1));
+  return res;
+};
