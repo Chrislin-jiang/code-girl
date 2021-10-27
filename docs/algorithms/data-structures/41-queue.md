@@ -137,3 +137,5 @@ class Deque {
 
 ## 循环队列
 
+## 优先级队列
+> [队列-搜-优先级队列](https://www.jianshu.com/p/ca1bb95ada76)
