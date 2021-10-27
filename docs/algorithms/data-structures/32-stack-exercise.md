@@ -523,7 +523,7 @@ const MinStack = function() {
 MinStack.prototype.push = function(x) {
   this.stack.push(x);
   // 若入栈的值小于当前最小值，则推入辅助栈栈顶
-	// this.stack2[this.stack2.length - 1] >= x，注意这里是 >=
+  // this.stack2[this.stack2.length - 1] >= x，注意这里是 >=
   if (this.stack2.length == 0 || this.stack2[this.stack2.length - 1] >= x) {
     this.stack2.push(x);
   }
@@ -655,6 +655,7 @@ queue.empty(); // 返回 false
 
 ### 题解
 
+ES5
 ::: details
 
 ```js
@@ -715,6 +716,50 @@ MyQueue.prototype.empty = function() {
   }
   return false;
 };
+```
+
+:::
+
+ES6
+::: details
+
+```js
+class MyQueue {
+  constructor() {
+    this.stack1 = [];
+    this.stack2 = [];
+  }
+
+  push(x) {
+    this.stack1.push(x);
+  }
+
+  pop() {
+    if (this.stack2.length) {
+      return this.stack2.pop();
+    } else {
+      while (this.stack1.length) {
+        this.stack2.push(this.stack1.pop());
+      }
+      return this.stack2.pop();
+    }
+  }
+
+  peek() {
+    if (this.stack2.length) {
+      return this.stack2[this.stack2.length - 1];
+    } else {
+      while (this.stack1.length) {
+        this.stack2.push(this.stack1.pop());
+      }
+      return this.stack2[this.stack2.length - 1];
+    }
+  }
+
+  empty() {
+    return this.stack1.length === 0 && this.stack2.length === 0;
+  }
+}
 ```
 
 :::

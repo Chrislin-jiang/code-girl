@@ -1,48 +1,45 @@
-const MinStack = function() {
-  this.stack = [];
-  this.min = Number.MAX_SAFE_INTEGER;
-};
-
-/**
- * @param {number} val
- * @return {void}
- */
-MinStack.prototype.push = function(val) {
-  if (val <= this.min) {
-    this.stack.push(this.min);
-    this.min = val;
+class MyQueue {
+  constructor() {
+    this.stack1 = [];
+    this.stack2 = [];
   }
-  this.stack.push(val);
-};
 
-/**
- * @return {void}
- */
-MinStack.prototype.pop = function() {
-  let temp = this.stack.pop();
-  if (temp === this.min) {
-    this.min = this.stack.pop();
+  push(x) {
+    this.stack1.push(x);
   }
-};
+
+  pop() {
+    if (this.stack2.length) {
+      return this.stack2.pop();
+    } else {
+      while (this.stack1.length) {
+        this.stack2.push(this.stack1.pop());
+      }
+      return this.stack2.pop();
+    }
+  }
+
+  peek() {
+    if (this.stack2.length) {
+      return this.stack2[this.stack2.length - 1];
+    } else {
+      while (this.stack1.length) {
+        this.stack2.push(this.stack1.pop());
+      }
+      return this.stack2[this.stack2.length - 1];
+    }
+  }
+
+  empty() {
+    return this.stack1.length === 0 && this.stack2.length === 0;
+  }
+}
 
 /**
- * @return {number}
- */
-MinStack.prototype.top = function() {
-  return this.stack[this.stack.length - 1];
-};
-/**
- * @return {number}
- */
-MinStack.prototype.getMin = function() {
-  return this.min;
-};
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
- * obj.push(val)
- * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
+ * Your MyQueue object will be instantiated and called as such:
+ * var obj = new MyQueue()
+ * obj.push(x)
+ * var param_2 = obj.pop()
+ * var param_3 = obj.peek()
+ * var param_4 = obj.empty()
  */
