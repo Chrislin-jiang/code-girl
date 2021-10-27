@@ -1,65 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      /**
-       * @param {number[]} deck
-       * @return {boolean}
-       * [1,2,3,4,4,3,2,1]
-       * [1,1,1,2,2,2,3,3]
-       * [1,1,1,2,2,2,3,3]
-       */
-      var hasGroupsSizeX = function(deck) {
-        if (deck.length === 1) {
-          return false;
-        } else {
-          // 最大公约数
-          const gcdFn = (a, b) => {
-            // 利用辗转相除法来计算最大公约数
-            let c = a % b;
-            if (c === 0) return b;
-            return gcdFn(b, c);
-          };
-          deck.sort((a, b) => a - b);
-          let count = 1;
-          let gcd;
-          for (let i = 1; i < deck.length; i++) {
-            if (deck[i] === deck[i - 1]) {
-              count++;
-            } else {
-              if (count === 1) {
-                return false;
-              } else {
-                if (gcd === undefined) {
-                  gcd = count;
-                } else {
-                  gcd = gcdFn(gcd, count);
-                }
-                count = 1;
-              }
-            }
-          }
-          // 最后
-          if (gcd === undefined) {
-            gcd = count;
-          } else {
-            gcd = gcdFn(gcd, count);
-          }
-          if (gcd >= 2) {
-            return true;
-          } else {
-            return false;
-          }
-        }
-      };
 
-      console.log(hasGroupsSizeX([1, 1]));
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 十进制转二进制
+    const decimalToBinary = (decNumber) => {
+      let temp = [], res = ''
+      while (decNumber > 0) {
+        temp.push(decNumber % 2)
+        decNumber = Math.floor(decNumber / 2)
+      }
+      while (temp.length !== 0) {
+        res = res + temp.pop().toString()
+      }
+      return res
+    }
+    console.log(decimalToBinary(5));
+  </script>
+</body>
+
 </html>
