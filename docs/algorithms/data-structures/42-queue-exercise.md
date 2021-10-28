@@ -339,6 +339,52 @@ O(logk)
 3. 双端队列
 O(N)
 
+#### 两层循环
+JavaScript API
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+ const maxSlidingWindow = function (nums, k) {
+	let m = 0, n = k, res = []
+	while (n <= nums.length) {
+		res.push(Math.max(...nums.slice(m, n)))
+		m++
+		n++
+	}
+	return res
+};
+```
+此法**超出时间限制**
+
+2
+```js
+const maxSlidingWindow = function(nums, k) {
+  const calMax = (nums, left, right) => {
+    let partMax = nums[left];
+    for (let i = left; i <= right; i++) {
+      if (nums[i] > partMax) {
+        partMax = nums[i];
+      }
+    }
+    return partMax;
+  };
+  let m = 0,
+    n = k - 1,
+    res = [];
+  while (n < nums.length) {
+    res.push(calMax(nums, m, n));
+    m++;
+    n++;
+  }
+  return res;
+};
+// 执行用时：7500 ms, 在所有 JavaScript 提交中击败了5.01%的用户
+// 内存消耗：73.9 MB, 在所有 JavaScript 提交中击败了6.58%的用户
+```
+
 #### 使用双端队列法
 核心的思路是维护一个有效的递减队列。
 
