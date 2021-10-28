@@ -5,7 +5,7 @@
  */
  const maxSlidingWindow = function (nums, k) {
 	let m = 0, n = k, res = []
-	while (k <= nums.length) {
+	while (n <= nums.length) {
 		res.push(Math.max(...nums.slice(m, n)))
 		m++
 		n++
@@ -25,7 +25,7 @@ const maxSlidingWindow = function (nums, k) {
 		return partMax
 	}
 	let m = 0, n = k, res = []
-	while (k <= nums.length) {
+	while (n <= nums.length) {
 		res.push(calMax(nums, m, n))
 		m++
 		n++
