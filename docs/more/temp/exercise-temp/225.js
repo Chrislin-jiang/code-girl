@@ -41,9 +41,19 @@ class MyStack {
 	 */
 	top() {
 		if (this.q1.length === 0) {
-			return this.q2[0]
+			while (this.q2.length > 1) {
+				this.q1.push(this.q2.shift())
+			}
+			let top = this.q2.shift()
+			this.q1.push(top)
+			return top
 		} else {
-			return this.q1[0]
+			while (this.q1.length > 1) {
+				this.q2.push(this.q1.shift())
+			}
+			let top = this.q1.shift()
+			this.q2.push(top)
+			return top
 		}
 	}
 	/**
