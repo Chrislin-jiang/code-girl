@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue.js开发去哪儿网 WebApp | 窗边的anini</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="apple-touch-icon" href="/code-girl/apple-touch-icon.png">
+    <link rel="icon" href="/code-girl/favicon.ico">
+    <link rel="manifest" href="/code-girl/manifest.json">
+    <meta name="description" content="路阻且长，行则将至">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/code-girl/assets/css/0.styles.95a048e1.css" as="style"><link rel="preload" href="/code-girl/assets/js/app.223cac8a.js" as="script"><link rel="preload" href="/code-girl/assets/js/2.d9d6c442.js" as="script"><link rel="preload" href="/code-girl/assets/js/68.bc22219a.js" as="script"><link rel="preload" href="/code-girl/assets/js/3.a7958272.js" as="script"><link rel="prefetch" href="/code-girl/assets/js/10.6dff095b.js"><link rel="prefetch" href="/code-girl/assets/js/100.762e2842.js"><link rel="prefetch" href="/code-girl/assets/js/101.64a0cf66.js"><link rel="prefetch" href="/code-girl/assets/js/102.2217049f.js"><link rel="prefetch" href="/code-girl/assets/js/103.1842d49a.js"><link rel="prefetch" href="/code-girl/assets/js/104.3fec0b20.js"><link rel="prefetch" href="/code-girl/assets/js/105.3fc6871a.js"><link rel="prefetch" href="/code-girl/assets/js/106.7f36687b.js"><link rel="prefetch" href="/code-girl/assets/js/107.486b3234.js"><link rel="prefetch" href="/code-girl/assets/js/108.80beb728.js"><link rel="prefetch" href="/code-girl/assets/js/109.640498d1.js"><link rel="prefetch" href="/code-girl/assets/js/11.864b3458.js"><link rel="prefetch" href="/code-girl/assets/js/110.1783d669.js"><link rel="prefetch" href="/code-girl/assets/js/111.4d4fc3cb.js"><link rel="prefetch" href="/code-girl/assets/js/112.a0684edb.js"><link rel="prefetch" href="/code-girl/assets/js/113.27984fb4.js"><link rel="prefetch" href="/code-girl/assets/js/114.6bd5174d.js"><link rel="prefetch" href="/code-girl/assets/js/115.c7f943c0.js"><link rel="prefetch" href="/code-girl/assets/js/116.e57131fe.js"><link rel="prefetch" href="/code-girl/assets/js/117.9c804ec4.js"><link rel="prefetch" href="/code-girl/assets/js/118.edff26ca.js"><link rel="prefetch" href="/code-girl/assets/js/119.30d65181.js"><link rel="prefetch" href="/code-girl/assets/js/12.e2c5e2b9.js"><link rel="prefetch" href="/code-girl/assets/js/120.6b4d757f.js"><link rel="prefetch" href="/code-girl/assets/js/121.f7fcbc78.js"><link rel="prefetch" href="/code-girl/assets/js/122.4aa2b0e2.js"><link rel="prefetch" href="/code-girl/assets/js/123.6cccb225.js"><link rel="prefetch" href="/code-girl/assets/js/124.461658ee.js"><link rel="prefetch" href="/code-girl/assets/js/125.e4e3bfb3.js"><link rel="prefetch" href="/code-girl/assets/js/126.36318c24.js"><link rel="prefetch" href="/code-girl/assets/js/127.88d452f6.js"><link rel="prefetch" href="/code-girl/assets/js/128.a7a76580.js"><link rel="prefetch" href="/code-girl/assets/js/129.638a64be.js"><link rel="prefetch" href="/code-girl/assets/js/13.559f9d70.js"><link rel="prefetch" href="/code-girl/assets/js/130.ea7486c7.js"><link rel="prefetch" href="/code-girl/assets/js/131.c1353a3b.js"><link rel="prefetch" href="/code-girl/assets/js/132.dfac7878.js"><link rel="prefetch" href="/code-girl/assets/js/133.dc9b873d.js"><link rel="prefetch" href="/code-girl/assets/js/134.c302bddb.js"><link rel="prefetch" href="/code-girl/assets/js/135.39e2a87e.js"><link rel="prefetch" href="/code-girl/assets/js/136.8a5ae2bf.js"><link rel="prefetch" href="/code-girl/assets/js/137.22d001bf.js"><link rel="prefetch" href="/code-girl/assets/js/138.55726c71.js"><link rel="prefetch" href="/code-girl/assets/js/139.0210bc53.js"><link rel="prefetch" href="/code-girl/assets/js/14.5e009f11.js"><link rel="prefetch" href="/code-girl/assets/js/140.509b5170.js"><link rel="prefetch" href="/code-girl/assets/js/141.74ee1578.js"><link rel="prefetch" href="/code-girl/assets/js/142.d4920133.js"><link rel="prefetch" href="/code-girl/assets/js/143.3385dfda.js"><link rel="prefetch" href="/code-girl/assets/js/144.4e27226c.js"><link rel="prefetch" href="/code-girl/assets/js/145.efe5b96e.js"><link rel="prefetch" href="/code-girl/assets/js/146.f3492d60.js"><link rel="prefetch" href="/code-girl/assets/js/147.ec91f79f.js"><link rel="prefetch" href="/code-girl/assets/js/148.be444079.js"><link rel="prefetch" href="/code-girl/assets/js/149.f37221cf.js"><link rel="prefetch" href="/code-girl/assets/js/15.6e589384.js"><link rel="prefetch" href="/code-girl/assets/js/150.8d4e8059.js"><link rel="prefetch" href="/code-girl/assets/js/151.bcdffd6e.js"><link rel="prefetch" href="/code-girl/assets/js/152.84465229.js"><link rel="prefetch" href="/code-girl/assets/js/153.91078e02.js"><link rel="prefetch" href="/code-girl/assets/js/16.0fed92e7.js"><link rel="prefetch" href="/code-girl/assets/js/17.9c030402.js"><link rel="prefetch" href="/code-girl/assets/js/18.f9fbdf6b.js"><link rel="prefetch" href="/code-girl/assets/js/19.6a271721.js"><link rel="prefetch" href="/code-girl/assets/js/20.c6674746.js"><link rel="prefetch" href="/code-girl/assets/js/21.b955bb32.js"><link rel="prefetch" href="/code-girl/assets/js/22.e5228c97.js"><link rel="prefetch" href="/code-girl/assets/js/23.71ea388c.js"><link rel="prefetch" href="/code-girl/assets/js/24.808982f5.js"><link rel="prefetch" href="/code-girl/assets/js/25.76814161.js"><link rel="prefetch" href="/code-girl/assets/js/26.b63d9e73.js"><link rel="prefetch" href="/code-girl/assets/js/27.e15e5c2e.js"><link rel="prefetch" href="/code-girl/assets/js/28.c2a59798.js"><link rel="prefetch" href="/code-girl/assets/js/29.9a2b570c.js"><link rel="prefetch" href="/code-girl/assets/js/30.6ca91072.js"><link rel="prefetch" href="/code-girl/assets/js/31.91b0e21f.js"><link rel="prefetch" href="/code-girl/assets/js/32.c94f310f.js"><link rel="prefetch" href="/code-girl/assets/js/33.fc839b51.js"><link rel="prefetch" href="/code-girl/assets/js/34.3751df10.js"><link rel="prefetch" href="/code-girl/assets/js/35.c2c77ae2.js"><link rel="prefetch" href="/code-girl/assets/js/36.93f284a9.js"><link rel="prefetch" href="/code-girl/assets/js/37.89561c9b.js"><link rel="prefetch" href="/code-girl/assets/js/38.17f9d495.js"><link rel="prefetch" href="/code-girl/assets/js/39.4c4f99f2.js"><link rel="prefetch" href="/code-girl/assets/js/4.ec50c956.js"><link rel="prefetch" href="/code-girl/assets/js/40.9fc88976.js"><link rel="prefetch" href="/code-girl/assets/js/41.e61ad491.js"><link rel="prefetch" href="/code-girl/assets/js/42.d5e851fd.js"><link rel="prefetch" href="/code-girl/assets/js/43.f91de7d4.js"><link rel="prefetch" href="/code-girl/assets/js/44.bbbf9dd6.js"><link rel="prefetch" href="/code-girl/assets/js/45.7c6c8d2d.js"><link rel="prefetch" href="/code-girl/assets/js/46.ae3141ff.js"><link rel="prefetch" href="/code-girl/assets/js/47.024b5379.js"><link rel="prefetch" href="/code-girl/assets/js/48.eceed5ae.js"><link rel="prefetch" href="/code-girl/assets/js/49.ae2fea85.js"><link rel="prefetch" href="/code-girl/assets/js/5.dfe2243a.js"><link rel="prefetch" href="/code-girl/assets/js/50.301af76e.js"><link rel="prefetch" href="/code-girl/assets/js/51.31fefa5c.js"><link rel="prefetch" href="/code-girl/assets/js/52.685c0e48.js"><link rel="prefetch" href="/code-girl/assets/js/53.0b2fa81e.js"><link rel="prefetch" href="/code-girl/assets/js/54.99ac51d7.js"><link rel="prefetch" href="/code-girl/assets/js/55.9373c9b7.js"><link rel="prefetch" href="/code-girl/assets/js/56.ce740235.js"><link rel="prefetch" href="/code-girl/assets/js/57.5cdca5a3.js"><link rel="prefetch" href="/code-girl/assets/js/58.ac12bcd8.js"><link rel="prefetch" href="/code-girl/assets/js/59.ac882a46.js"><link rel="prefetch" href="/code-girl/assets/js/6.29b05f97.js"><link rel="prefetch" href="/code-girl/assets/js/60.6b160d40.js"><link rel="prefetch" href="/code-girl/assets/js/61.701fddf1.js"><link rel="prefetch" href="/code-girl/assets/js/62.b6d2820d.js"><link rel="prefetch" href="/code-girl/assets/js/63.5ac71760.js"><link rel="prefetch" href="/code-girl/assets/js/64.0215df8b.js"><link rel="prefetch" href="/code-girl/assets/js/65.132779cb.js"><link rel="prefetch" href="/code-girl/assets/js/66.98fdeb68.js"><link rel="prefetch" href="/code-girl/assets/js/67.ad03b84c.js"><link rel="prefetch" href="/code-girl/assets/js/69.8e651471.js"><link rel="prefetch" href="/code-girl/assets/js/7.203f8a81.js"><link rel="prefetch" href="/code-girl/assets/js/70.7f83e00a.js"><link rel="prefetch" href="/code-girl/assets/js/71.94428fbf.js"><link rel="prefetch" href="/code-girl/assets/js/72.2357247e.js"><link rel="prefetch" href="/code-girl/assets/js/73.c2c211f1.js"><link rel="prefetch" href="/code-girl/assets/js/74.2a5c0119.js"><link rel="prefetch" href="/code-girl/assets/js/75.02b082d9.js"><link rel="prefetch" href="/code-girl/assets/js/76.36db4742.js"><link rel="prefetch" href="/code-girl/assets/js/77.757af03d.js"><link rel="prefetch" href="/code-girl/assets/js/78.cc33d724.js"><link rel="prefetch" href="/code-girl/assets/js/79.b80f442c.js"><link rel="prefetch" href="/code-girl/assets/js/8.bbd9654c.js"><link rel="prefetch" href="/code-girl/assets/js/80.37762922.js"><link rel="prefetch" href="/code-girl/assets/js/81.809bb7a7.js"><link rel="prefetch" href="/code-girl/assets/js/82.22c37bdb.js"><link rel="prefetch" href="/code-girl/assets/js/83.a6b36be8.js"><link rel="prefetch" href="/code-girl/assets/js/84.61c02917.js"><link rel="prefetch" href="/code-girl/assets/js/85.c87af2f4.js"><link rel="prefetch" href="/code-girl/assets/js/86.4c0db8ed.js"><link rel="prefetch" href="/code-girl/assets/js/87.fb49738a.js"><link rel="prefetch" href="/code-girl/assets/js/88.2cc8998d.js"><link rel="prefetch" href="/code-girl/assets/js/89.49572659.js"><link rel="prefetch" href="/code-girl/assets/js/9.87488fa6.js"><link rel="prefetch" href="/code-girl/assets/js/90.cf81f66d.js"><link rel="prefetch" href="/code-girl/assets/js/91.e2744e17.js"><link rel="prefetch" href="/code-girl/assets/js/92.64c6d59a.js"><link rel="prefetch" href="/code-girl/assets/js/93.43c41cc1.js"><link rel="prefetch" href="/code-girl/assets/js/94.4073f420.js"><link rel="prefetch" href="/code-girl/assets/js/95.5995677b.js"><link rel="prefetch" href="/code-girl/assets/js/96.81d8b6ef.js"><link rel="prefetch" href="/code-girl/assets/js/97.5e4be9f7.js"><link rel="prefetch" href="/code-girl/assets/js/98.f6c9cc15.js"><link rel="prefetch" href="/code-girl/assets/js/99.23d4f0b4.js">
+    <link rel="stylesheet" href="/code-girl/assets/css/0.styles.95a048e1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/code-girl/" class="home-link router-link-active"><!----> <span class="site-name">窗边的anini</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/code-girl/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/code-girl/guide/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/js/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/framework/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/framework/project/" class="nav-link router-link-active">
+  项目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/backend/mongodb/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/computer/basis/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/os/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/design-mode/" class="nav-link">
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/data-structures/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/exercise/" class="nav-link">
+  练习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/more/growth/" class="nav-link">
+  面经
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/library/" class="nav-link">
+  三味书屋
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/time/" class="nav-link">
+  点滴记录
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/fighting/" class="nav-link">
+  阳光
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/exercise/" class="nav-link">
+  程序媛必修
+</a></li></ul></div></div> <a href="https://github.com/Chrislin-jiang/code-girl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/code-girl/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/code-girl/guide/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/js/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/framework/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/framework/project/" class="nav-link router-link-active">
+  项目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/backend/mongodb/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/computer/basis/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/os/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/computer/design-mode/" class="nav-link">
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/data-structures/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/algorithms/exercise/" class="nav-link">
+  练习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code-girl/more/growth/" class="nav-link">
+  面经
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/library/" class="nav-link">
+  三味书屋
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/time/" class="nav-link">
+  点滴记录
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/fighting/" class="nav-link">
+  阳光
+</a></li><li class="dropdown-item"><!----> <a href="/code-girl/more/exercise/" class="nav-link">
+  程序媛必修
+</a></li></ul></div></div> <a href="https://github.com/Chrislin-jiang/code-girl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>PROJECT</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/code-girl/framework/project/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html" class="active sidebar-link">Vue.js开发去哪儿网 WebApp</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#一、项目介绍" class="sidebar-link">一、项目介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-1-技术栈" class="sidebar-link">1.1 技术栈</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-2-项目展示" class="sidebar-link">1.2 项目展示</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-3-项目收获" class="sidebar-link">1.3 项目收获</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-4-项目目录" class="sidebar-link">1.4 项目目录</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-5-项目代码初始化" class="sidebar-link">1.5 项目代码初始化</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_1-6-页面组件化" class="sidebar-link">1.6 页面组件化</a></li></ul></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#二、项目插件的使用" class="sidebar-link">二、项目插件的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_2-1-ajax-获取-首页数据" class="sidebar-link">2.1 Ajax 获取 首页数据</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_2-2-轮播图" class="sidebar-link">2.2 轮播图</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_2-3-better-scroll" class="sidebar-link">2.3 Better-scroll</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_2-4-使用vuex实现数据共享" class="sidebar-link">2.4 使用vuex实现数据共享</a></li></ul></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#三、项目难点" class="sidebar-link">三、项目难点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_3-1-兄弟组件间联动" class="sidebar-link">3.1 兄弟组件间联动</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_3-2-search组件" class="sidebar-link">3.2 search组件</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_3-3-递归组件" class="sidebar-link">3.3 递归组件</a></li></ul></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#四、项目中遇到的问题及解决方案" class="sidebar-link">四、项目中遇到的问题及解决方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_4-1-localstorage" class="sidebar-link">4.1 localStorage</a></li><li class="sidebar-sub-header"><a href="/code-girl/framework/project/1-Vue.js开发去哪儿网WebApp.html#_4-2-keep-alive" class="sidebar-link">4.2 keep-alive</a></li></ul></li></ul></li><li><a href="/code-girl/framework/project/2-SpringBoot+Vue员工管理系统.html" class="sidebar-link">Spring Boot + Vue 开发前后端分离的员工管理系统</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、项目介绍"><a href="#一、项目介绍" class="header-anchor">#</a> 一、项目介绍</h2> <p><strong>这个项目主要参考了去哪儿网的布局，完成了首页、城市选择页面、详情页面的开发。</strong></p> <ul><li>[x] 首页：实现了多区域轮播的功能，以及多区域列表的展示；</li> <li>[x] 城市选择页面：在这个页面实现了城市展示、城市搜索、城市右侧字母和左侧区块动态联动的效果，当用户在城市列表切换了新的城市后，首页对应的城市也会跟着变化；</li> <li>[x] 景点详情页面：实现公用的画廊组件，以及递归展示的列表组件。</li></ul> <img src="/code-girl/framework/project/img/Vue仿去哪儿网项目模块-2.png" alt="vue仿去哪儿网webapp"> <h3 id="_1-1-技术栈"><a href="#_1-1-技术栈" class="header-anchor">#</a> 1.1 技术栈</h3> <p><font color="#4169E1">Vue 2.5: </font>用于构建用户界面的渐进式框架</p> <p><font color="#4169E1">Vuex: </font>专为 Vue.js 应用程序开发的状态管理模式。</p> <p><font color="#4169E1">Vue Router: </font>是 Vue.js 官方的路由管理器。</p> <p><font color="#4169E1">keep-alive: </font>Vue提供的一个抽象组件，用来对组件进行缓存，从而节省性能</p> <p><font color="#4169E1">vue-awesome-swiper: </font>基于 Swiper、适用于 Vue 的轮播组件，支持服务端渲染和单页应用。</p> <p><font color="#4169E1">stylus: </font>css预处理器</p> <p><font color="#4169E1">Axios: </font>一个基于 promise 的 HTTP 库</p> <p><font color="#4169E1">better-scroll: </font>是一款重点解决移动端（已支持 PC）各种滚动场景需求的插件。</p> <p><font color="#4169E1">webpack: </font>一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。</p> <p><font color="#4169E1">EsLint: </font>帮助检查Javascript编程时语法错误，规范代码风格的工具</p> <p><font color="#4169E1">iconfont: </font>阿里巴巴图标库</p> <p><font color="#4169E1">fastclick: </font>解决移动端点击延迟300ms的问题</p> <h3 id="_1-2-项目展示"><a href="#_1-2-项目展示" class="header-anchor">#</a> 1.2 项目展示</h3> <ol><li>景点门票首页</li></ol> <img src="/code-girl/framework/project/img/2去哪儿网首页展示.gif" alt="去哪儿网首页展示"> <ol start="2"><li>城市列表页面</li></ol> <img src="/code-girl/framework/project/img/4城市搜索-字母表.gif" alt="4城市搜索-字母表"> <ol start="3"><li>景点详情页面</li></ol> <img src="/code-girl/framework/project/img/5详情页面-画廊.gif" alt="5详情页面-画廊"> <h3 id="_1-3-项目收获"><a href="#_1-3-项目收获" class="header-anchor">#</a> 1.3 项目收获</h3> <p><strong>1. 理解整个vue项目的开发流程，上手中型vue项目的开发</strong></p> <ul><li>Vue Router 来做多页面的路由</li> <li>Vuex 多个组件的数据共享</li> <li>插件swiper实现页面轮播效果</li> <li>Axios 来进行 Ajax 数据的获取</li></ul> <p><strong>2. 移动端页面布局技巧</strong></p> <p><strong>3. stylus 编写前端的样式</strong></p> <p><strong>4. 公用组件的拆分</strong></p> <p><strong>5. 规范的代码编写</strong></p> <h3 id="_1-4-项目目录"><a href="#_1-4-项目目录" class="header-anchor">#</a> 1.4 项目目录</h3> <p>附上项目目录和仓库地址<a href="https://gitee.com/chrislinlin/travelwheretest" target="_blank" rel="noopener noreferrer">vue仿去哪儿网webapp<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>F:.
+│  .babelrc
+│  .editorconfig
+│  .eslintignore
+│  .eslintrc.js
+│  .gitignore
+│  .postcssrc.js
+│  index.html
+│  package-lock.json
+│  package.json
+│  README.en.md
+│  README.md
+│
+├─build
+│      build.js
+│      check-versions.js
+│      logo.png
+│      utils.js
+│      vue-loader.conf.js
+│      webpack.base.conf.js
+│      webpack.dev.conf.js
+│      webpack.prod.conf.js
+│
+├─config
+│      dev.env.js
+│      index.js
+│      prod.env.js
+│
+├─src
+│  │  App.vue
+│  │  main.js
+│  │
+│  ├─assets
+│  │  └─styles
+│  │      │  border.css
+│  │      │  iconfont.css
+│  │      │  mixins.styl
+│  │      │  reset.css
+│  │      │  varibles.styl
+│  │      │
+│  │      └─iconfont
+│  │              iconfont.eot
+│  │              iconfont.svg
+│  │              iconfont.ttf
+│  │              iconfont.woff
+│  │
+│  ├─common
+│  │  ├─fade
+│  │  │      FadeAnimation.vue
+│  │  │
+│  │  └─gallary
+│  │          Gallary.vue
+│  │
+│  ├─pages
+│  │  │  testGit.js
+│  │  │
+│  │  ├─city
+│  │  │  │  City.vue
+│  │  │  │
+│  │  │  └─components
+│  │  │          Alphabet.vue
+│  │  │          Header.vue
+│  │  │          List.vue
+│  │  │          Search.vue
+│  │  │
+│  │  ├─detail
+│  │  │  │  Detail.vue
+│  │  │  │
+│  │  │  └─components
+│  │  │          Banner.vue
+│  │  │          Header.vue
+│  │  │          List.vue
+│  │  │
+│  │  └─home
+│  │      │  Home.vue
+│  │      │
+│  │      └─components
+│  │              Header.vue
+│  │              Icons.vue
+│  │              Recommend.vue
+│  │              Swiper.vue
+│  │              Weekend.vue
+│  │
+│  ├─router
+│  │      index.js
+│  │
+│  └─store
+│          index.js
+│          mutations.js
+│          state.js
+│
+└─static
+        .gitkeep
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br></div></div><h3 id="_1-5-项目代码初始化"><a href="#_1-5-项目代码初始化" class="header-anchor">#</a> 1.5 项目代码初始化</h3> <p>由于做的是webapp，所以需要针对移动端，做相应的准备。</p> <p><strong>1. meta标签相关设置</strong></p> <p>index.html</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>效果：页面比例始终是1：1，用户通过手指操作缩放是无效的</p> <p><strong>2. 引入reset.css</strong></p> <p>目的：重置页面样式</p> <blockquote><p>因为在不同移动端、不同浏览器上页面的初始样式是不一样的，引入reset.css为了保证在每个浏览器上展示出的初始效果是一样的</p></blockquote> <p><strong>3. 引入border.css</strong></p> <p>目的：解决移动端1像素边框问题</p> <p><strong>4. 项目中安装fastclick</strong></p> <p><code>npm install fastclick --save</code></p> <p>目的：解决移动端300ms延迟问题</p> <h3 id="_1-6-页面组件化"><a href="#_1-6-页面组件化" class="header-anchor">#</a> 1.6 页面组件化</h3> <p>路由
+router-index.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'@/pages/home/Home'</span>
+<span class="token keyword">import</span> City <span class="token keyword">from</span> <span class="token string">'@/pages/city/City'</span>
+<span class="token keyword">import</span> Detail <span class="token keyword">from</span> <span class="token string">'@/pages/detail/Detail'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Home
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/city'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'City'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> City
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/detail/:id'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Detail'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Detail
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token function">scrollBehavior</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> savedPosition</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> y<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>页面相关目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pages
+├─city
+│  │  City.vue
+│  │
+│  └─components
+│          Alphabet.vue
+│          Header.vue
+│          List.vue
+│          Search.vue
+│
+├─detail
+│  │  Detail.vue
+│  │
+│  └─components
+│          Banner.vue
+│          Header.vue
+│          List.vue
+│
+└─home
+    │  Home.vue
+    │
+    └─components
+            Header.vue
+            Icons.vue
+            Recommend.vue
+            Swiper.vue
+            Weekend.vue
+common
+├─fade
+│      FadeAnimation.vue
+│
+└─gallary
+        Gallary.vue
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><blockquote><p>比如，对于景点门票页面，可以将其拆分成若干个小组件，放到 components 目录下，通过在 Home.vue 容器组件中引用组件，整合出页面</p></blockquote> <p>Home.vue部分代码</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-header</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-swiper</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swiperList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-swiper</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-icons</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>iconList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-icons</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-recommend</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>recommendList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-recommend</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-weekend</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>weekendList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-weekend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> HomeHeader <span class="token keyword">from</span> <span class="token string">'./components/Header'</span>
+<span class="token keyword">import</span> HomeSwiper <span class="token keyword">from</span> <span class="token string">'./components/Swiper'</span>
+<span class="token keyword">import</span> HomeIcons <span class="token keyword">from</span> <span class="token string">'./components/Icons'</span>
+<span class="token keyword">import</span> HomeRecommend <span class="token keyword">from</span> <span class="token string">'./components/Recommend'</span>
+<span class="token keyword">import</span> HomeWeekend <span class="token keyword">from</span> <span class="token string">'./components/Weekend'</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HomeHeader<span class="token punctuation">,</span>
+    HomeSwiper<span class="token punctuation">,</span>
+    HomeIcons<span class="token punctuation">,</span>
+    HomeRecommend<span class="token punctuation">,</span>
+    HomeWeekend
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      lastCity<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      swiperList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      iconList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      recommendList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      weekendList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h2 id="二、项目插件的使用"><a href="#二、项目插件的使用" class="header-anchor">#</a> 二、项目插件的使用</h2> <h3 id="_2-1-ajax-获取-首页数据"><a href="#_2-1-ajax-获取-首页数据" class="header-anchor">#</a> 2.1 Ajax 获取 首页数据</h3> <p><strong>vue推荐使用axios，实现跨平台的数据请求</strong></p> <p><strong>安装 axios</strong></p> <p><code>npm install axios --save</code></p> <blockquote><p>在 Home.vue 发送 Ajax 请求是最好的选择，这个组件获取 Ajax 数据之后，可以把数据传给每个子组件</p></blockquote> <blockquote><p>把一些静态的文件放置在static目录下，通过 http://localhost:8080/static/mock/index.json 可以访问到</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>static
+│  .gitkeep
+│
+└─mock
+        city.json
+        detail.json
+        index.json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Home.vue 部分代码</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-header</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-swiper</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swiperList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-swiper</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-icons</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>iconList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-icons</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-recommend</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>recommendList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-recommend</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home-weekend</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>weekendList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>home-weekend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> HomeHeader <span class="token keyword">from</span> <span class="token string">'./components/Header'</span>
+<span class="token keyword">import</span> HomeSwiper <span class="token keyword">from</span> <span class="token string">'./components/Swiper'</span>
+<span class="token keyword">import</span> HomeIcons <span class="token keyword">from</span> <span class="token string">'./components/Icons'</span>
+<span class="token keyword">import</span> HomeRecommend <span class="token keyword">from</span> <span class="token string">'./components/Recommend'</span>
+<span class="token keyword">import</span> HomeWeekend <span class="token keyword">from</span> <span class="token string">'./components/Weekend'</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HomeHeader<span class="token punctuation">,</span>
+    HomeSwiper<span class="token punctuation">,</span>
+    HomeIcons<span class="token punctuation">,</span>
+    HomeRecommend<span class="token punctuation">,</span>
+    HomeWeekend
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      lastCity<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      swiperList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      iconList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      recommendList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      weekendList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'city'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">getHomeInfo</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/index.json?city='</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>getHomeInfoSucc<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">getHomeInfoSucc</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res <span class="token operator">=</span> res<span class="token punctuation">.</span>data
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>ret <span class="token operator">&amp;&amp;</span> res<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> data <span class="token operator">=</span> res<span class="token punctuation">.</span>data
+        <span class="token keyword">this</span><span class="token punctuation">.</span>swiperList <span class="token operator">=</span> data<span class="token punctuation">.</span>swiperList
+        <span class="token keyword">this</span><span class="token punctuation">.</span>iconList <span class="token operator">=</span> data<span class="token punctuation">.</span>iconList
+        <span class="token keyword">this</span><span class="token punctuation">.</span>recommendList <span class="token operator">=</span> data<span class="token punctuation">.</span>recommendList
+        <span class="token keyword">this</span><span class="token punctuation">.</span>weekendList <span class="token operator">=</span> data<span class="token punctuation">.</span>weekendList
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>lastCity <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHomeInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div><p><strong>父子组件之间进行通讯</strong></p> <blockquote><p>父组件通过 props 传递数据给子组件，子组件通过 emit 发送事件传递数据给父组件</p></blockquote> <p>以 List 组件 为例（List.vue 部分代码）</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>热销推荐<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span>
+        <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>li<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item border-bottom<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item of list<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>/detail/<span class="token punctuation">'</span> + item.id<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.imgUrl<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-info<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{item.title}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-desc<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{item.desc}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>查看详情<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'HomeRecommend'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    list<span class="token operator">:</span> Array
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h3 id="_2-2-轮播图"><a href="#_2-2-轮播图" class="header-anchor">#</a> 2.2 轮播图</h3> <p>安装 vue-awesome-swiper 插件</p> <p><code>npm install vue-awesome-swiper@2.6.7 --save</code></p> <p>轮播在多个组件中使用</p> <img src="/code-girl/framework/project/img/6-swiper.gif" alt="6-swiper"> <p>以 home-components-Swiper.vue 为例</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>wrapper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swiper</span> <span class="token attr-name">:options</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swiperOption<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>showSwiper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swiper-slide</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item of list<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swiper-img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.imgUrl<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swiper-slide</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swiper-pagination<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pagination<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swiper</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'HomeSwiper'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    list<span class="token operator">:</span> Array
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      swiperOption<span class="token operator">:</span> <span class="token punctuation">{</span>
+        pagination<span class="token operator">:</span> <span class="token string">'.swiper-pagination'</span><span class="token punctuation">,</span>
+        loop<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">showSwiper</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">.</span>length
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h3 id="_2-3-better-scroll"><a href="#_2-3-better-scroll" class="header-anchor">#</a> 2.3 Better-scroll</h3> <p>安装</p> <p><code>npm install better-scroll --save</code></p> <p>使用</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>wrapper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  &lt;!-- you can put some other DOMs here, it won't affect the scrolling
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code>import BScroll from '@better-scroll/core'
+let wrapper = document.querySelector('.wrapper')
+let scroll = new BScroll(wrapper)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_2-4-使用vuex实现数据共享"><a href="#_2-4-使用vuex实现数据共享" class="header-anchor">#</a> 2.4 使用vuex实现数据共享</h3> <p>安装vuex</p> <p><code>npm install vuex --save</code></p> <p>希望在 城市列表页面 点击城市，首页右上角城市可以 进行相应的改变。</p> <p><strong>具体描述为：</strong></p> <p>项目中是为了实现城市选择列表页面和首页的数据传递，并且没有公用的组件，city/components/List.vue
+、home/components/Header.vue、Home.vue组件，都需要获取到数据。</p> <p>因为这个项目没有需要进行异步的操作，也不需要对数据进行额外的处理，所以项目中只用到了 state 和 mutations。在 state 中存储了 city 数据，然后在 mutation 里定义事件类型和函数 changeCity</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>store
+    index.js
+    mutations.js
+    state.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>state.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> defaultCity <span class="token operator">=</span> <span class="token string">'上海'</span>
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span>city<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    defaultCity <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>city
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  city<span class="token operator">:</span> defaultCity
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>mutations.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">changeCity</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>city <span class="token operator">=</span> city
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      localStorage<span class="token punctuation">.</span>city <span class="token operator">=</span> city
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>index.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> state <span class="token keyword">from</span> <span class="token string">'./state'</span>
+<span class="token keyword">import</span> mutations <span class="token keyword">from</span> <span class="token string">'./mutations'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  state<span class="token punctuation">,</span>
+  mutations
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>Home.vue 组件，在计算属性中，<code>this.$store.state.xxx</code>，在这个项目中是 <code>this.$store.state.city</code>可以获取到 state 数据。当然，为了使代码更加简洁，用 mapState 将 <code>this.xxx</code> 映射为 <code>this.$store.state.xxx</code>。</p> <p>在 List.vue 中，通过 commit 来触发 mutations 里面的方法进行数据的修改。同样，为了使代码更加简洁，引入 mapMutations 将 <code>this.changeCity(city)</code> 映射为 <code>this.$store.commit('changeCity', city)</code>。</p> <p>【city/List.vue 具体是】</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapState<span class="token punctuation">,</span> mapMutations <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      currentCity<span class="token operator">:</span> <span class="token string">'city'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">handleCityClick</span> <span class="token punctuation">(</span><span class="token parameter">city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// this.$store.commit('changeCity', city)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeCity</span><span class="token punctuation">(</span>city<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'changeCity'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>这样就实现了这几个组件的数据共享。</p> <h2 id="三、项目难点"><a href="#三、项目难点" class="header-anchor">#</a> 三、项目难点</h2> <h3 id="_3-1-兄弟组件间联动"><a href="#_3-1-兄弟组件间联动" class="header-anchor">#</a> 3.1 兄弟组件间联动</h3> <p>实现功能：点击城市列表页面右侧的字母，列表选项会滚动到对应的字母区域。【gif展示】</p> <blockquote><p>兄弟组件的传值，可以通过 bus 总线的形式来传值。但是因为我们现在这个非父子组件比较简单，可以让 Alphabet.vue 组件将值传递给父组件 City.vue 组件，然后 City.vue 组件再将值转发给 List.vue 组件，这样就实现了兄弟组件的传值。【子组件给父组件，父组件再转给另一个子组件】。这样，在 Alphabet.vue 中点击右侧字母，会获取到对应的字母。</p></blockquote> <img src="/code-girl/framework/project/img/4城市搜索-字母表.gif" alt="4城市搜索-字母表"> <p>Alphabet.vue</p> <p>在循环的元素上加一个点击事件，例如 handleLetterClick，然后在 methods 中写这个事件方法：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item of letters<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleLetterClick<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      {{item}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">handleLetterClick</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">&quot;change&quot;</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>接下来，将父组件接收到的这个数据转发给子组件 List.vue，父组件是通过属性向子组件传值的。</p> <p>首先在父组件 City.vue 里的 data 中定义一个 letter，默认值是空，在 <code>handleLetterClick</code> 方法中，当接受到外部传来的 letter 的时候，让 <code>this.letter = letter</code>。</p> <p>City.vue</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>city-header</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>city-header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>city-search</span> <span class="token attr-name">:cities</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>cities<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>city-search</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>city-list</span>
+      <span class="token attr-name">:cities</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>cities<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:hot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hotCities<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:letter</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>letter<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>city-list</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>city-alphabet</span>
+      <span class="token attr-name">:cities</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>cities<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@change</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleLetterChange<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>city-alphabet</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        hotCities<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        cities<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        letter<span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">handleAlpChange</span><span class="token punctuation">(</span><span class="token parameter">letter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>letter <span class="token operator">=</span> letter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>最后只需要把 letter 传递给子组件 List.vue 就可以了，在 City.vue 组件的模板 city-list 中通过 <code>:letter=&quot;letter&quot;</code> 向子组件 List 传值，在 props 中接收这个 letter，并且验证类型为 String 类型。</p> <p>List.vue</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    hot<span class="token operator">:</span> Array<span class="token punctuation">,</span>
+    cities<span class="token operator">:</span> Object<span class="token punctuation">,</span>
+    letter<span class="token operator">:</span> String
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>这样就实现了兄弟组件的传值。</p> <p><font color="#FF0000">【项目难点】</font></p> <p><strong>接下来要做的是，当 List.vue 发现 letter 有改变的时候，就需要让组件显示的列表项跟 letter 相同的首字母的列表项要显示出来，怎么做呢？</strong></p> <p>这个时候就要借助一个侦听器，监听letter的变化；</p> <p>better-scroll 给提供了这样一个接口，<code>scroll.scorllToElement</code>，如果 letter 不为空的时候，就调用 <code>this.scroll.scrollToElement()</code> 这个方法，可以让滚动区自动滚到某一个元素上，那么怎么传这个元素呢？在循环城市这一块中，给循环项加一个 ref 引用来获取当前 Dom 元素，等于 key，然后回到侦听器的 letter 中，定义一个 element，它就等于通过 ref 获取到的元素：</p> <img src="/code-girl/framework/project/img/better-scroll.png" alt="scroll.scorllToElement"> <p>List.vue</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">letter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>letter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>letter<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>scroll<span class="token punctuation">.</span><span class="token function">scrollToElement</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>这个时候就可以通过字母获取到对应的区域，然后把 element 传入 scrollToElement 里，注意，上边代码最后加了一个 [0]，这是因为如果不加，通过 ref 或的内容就是一个数组，这个数组里的第一个元素才是真正的 DOM 元素，这个时候，点击右侧字母表，就可以跳到对应的字母下的城市列表了。</p> <p>点击跳转的功能实现啦</p> <h3 id="_3-2-search组件"><a href="#_3-2-search组件" class="header-anchor">#</a> 3.2 search组件</h3> <p><strong>功能：进入到城市选择页面的时候，当 focus 到搜索框，输入城市名或拼音能够把搜索的结果显示出来。</strong></p> <img src="/code-girl/framework/project/img/3城市列表-搜索.gif" alt="3城市列表-搜索"> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>keyword<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search-input<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>输入城市名或拼音<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search-content<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>keyword<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span>
+          <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search-item border-bottom<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item of list<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleCityClick(item.name)<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>
+          {{item.name}}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search-item border-bottom<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hasNoData<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          没有找到匹配数据
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Bscroll <span class="token keyword">from</span> <span class="token string">'better-scroll'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mapMutations <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'CitySearch'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    cities<span class="token operator">:</span> Object
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      keyword<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      list<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      timer<span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">hasNoData</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">.</span>length
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">keyword</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">clearTimeout</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>keyword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>cities<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span>spell<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>keyword<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span> value<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>keyword<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> result
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">handleCityClick</span> <span class="token punctuation">(</span><span class="token parameter">city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeCity</span><span class="token punctuation">(</span>city<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'changeCity'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>scroll <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bscroll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>search<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br></div></div><p><font color="#FF0000">【性能优化---防抖】</font></p> <blockquote><p>写一个侦听器 watch，在里边监听 keyword 的改变，考虑到性能优化，使用防抖的方式来实现，先在 data 中定义一个 timer 定时器，默认值为 null，然后在监听 keyword 的方法中，判断，当 timer 为 null 时，清除这个定时器。下面写这个定时器的方法，当延时 100ms 的时候，箭头函数会被执行。</p></blockquote> <h3 id="_3-3-递归组件"><a href="#_3-3-递归组件" class="header-anchor">#</a> 3.3 递归组件</h3> <p><strong>递归组件的意思就是在组件自身调用组件自身。</strong></p> <p>数据 detail.json</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;ret&quot;: true,
+  &quot;data&quot;: {
+    &quot;sightName&quot;: &quot;大连圣亚海洋世界(AAAA景区)&quot;,
+    &quot;bannerImg&quot;: &quot;http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg&quot;,
+    &quot;gallaryImgs&quot;: [&quot;http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg&quot;, &quot;http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png&quot;],
+    &quot;categoryList&quot;: [{
+        &quot;title&quot;: &quot;成人票&quot;,
+        &quot;children&quot;: [{
+          &quot;title&quot;: &quot;成人三馆联票&quot;,
+          &quot;children&quot;: [{
+            &quot;title&quot;: &quot;成人三馆联票 - 某一连锁店销售&quot;
+          }]
+        },{
+          &quot;title&quot;: &quot;成人五馆联票&quot;
+        }]
+      }, {
+        &quot;title&quot;: &quot;学生票&quot;
+      }, {
+        &quot;title&quot;: &quot;儿童票&quot;
+      }, {
+        &quot;title&quot;: &quot;特惠票&quot;
+      }]
+  }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>list.vue</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>(item, index) of list<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-title border-bottom<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-title-icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        {{item.title}}
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item-chilren<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>detail-list</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>detail-list</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'DetailList'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    list<span class="token operator">:</span> Array
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylus<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  .item-title-icon
+    <span class="token property">position</span><span class="token punctuation">:</span> relative
+    <span class="token property">left</span><span class="token punctuation">:</span> .06rem
+    <span class="token property">top</span><span class="token punctuation">:</span> .06rem
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block
+    <span class="token property">width</span><span class="token punctuation">:</span> .36rem
+    <span class="token property">height</span><span class="token punctuation">:</span> .36rem
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>http://s.qunarzz.com/piao/image/touch/sight/detail.png<span class="token punctuation">)</span></span> 0 -.45rem no-repeat
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> .1rem
+    <span class="token property">background-size</span><span class="token punctuation">:</span> .4rem 3rem
+  .item-title
+    <span class="token property">line-height</span><span class="token punctuation">:</span> .8rem
+    <span class="token property">font-size</span><span class="token punctuation">:</span> .32rem
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0 .2rem
+  .item-chilren
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0 .2rem
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><blockquote><p>上面代码中，在 <code>list-children</code> 这个元素下，先做了一个判断，当 <code>item.children</code> 下有值的时候，调用一下自身，也就是 detail-list 这个组件，这个组件也是通过属性的形式，传一个 list，因为在 list.vue 中已经通过 props 接收到 list 了，而且外层已经循环过 list 了，现在要获取 list 下的 children 中的数据，所以直接让这个 list 属性等于 <code>item.children</code> 就可以了。因为数据存在层级关系，可以通过添加样式呈现出来，效果如下图：</p></blockquote> <img src="/code-girl/framework/project/img/递归.PNG" alt="递归.PNG"> <h2 id="四、项目中遇到的问题及解决方案"><a href="#四、项目中遇到的问题及解决方案" class="header-anchor">#</a> 四、项目中遇到的问题及解决方案</h2> <p>这部分内容并不是所有在项目中遇到的问题和解决方法，因为上文中也有相应的描述，这部分内容是对上文的补充。</p> <h3 id="_4-1-localstorage"><a href="#_4-1-localstorage" class="header-anchor">#</a> 4.1 localStorage</h3> <p>刚开始在实现首页右上角城市定位显示的时候，src 目录下新建了一个 store 目录，存储了 Vuex 中的默认数据，city 直接设置成了“北京”，但是其实这样去写，是有问题的，点击城市，会改变这个 city，但是当页面刷新了，就又变回了北京。</p> <p>考虑到在真实的项目中，如果你这次选中了一个城市，下次再打开这个网页的时候，上次选的城市还应该在的，怎么解决这个问题呢？</p> <p>这时可以借助 HTML5 中提供了一个新的 api，叫做 <code>localStorage localStorage</code>，它可以实现本地存储，在这里也就是实现保存城市的功能。</p> <p>store/index.js中，这样去写代码，当用户尝试去改变城市的时候，我不但把 state 中的 city 改了，同时还去存一个 <code>localStorage</code>，直接写 <code>localStorage.city = city</code> 就可以了。然后让 stare 中 city 的默认值是 <code>localStorage.city || &quot;北京&quot;</code>，就可以了。也就是 city 的值我默认先去 <code>localStorage</code> 中取，如果取不到，才用默认的 “北京”。</p> <p>store/index.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        city<span class="token operator">:</span> localStorage<span class="token punctuation">.</span>city <span class="token operator">||</span> <span class="token string">&quot;北京&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">changeCity</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+            localStorage<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>这个时候打开页面，当用户选择一个城市，然后刷新页面，可以看到上次选择的城市还在。但是当使用 <code>localStorage</code> 的时候，建议在外层包裹一个 <code>try{ }catch(e){ }</code>，因为在某些浏览器，如果用户关闭了本地存储这样的功能，或者使用隐身模式，使用 <code>localStorage</code> 可能导致浏览器直接抛出异常，代码就运行不了了，为了避免这种问题，建议在外层加一个 <code>try{ }catch(e){ }</code>，怎么加呢？</p> <p>先定义一个默认的 <code>defaultCity</code> 等于“北京”，然后写一个 <code>try{ }catch(e){ }</code>，这样写：如果有 <code>localStorage.city</code>，<code>default.city</code> 就等于 <code>localStorage.city</code>，下边 state 中的 city 就可以等于 <code>defaultCity</code> 了，同样在 mutations 的 changeCity 中也要写一个 <code>try{ }catch(e)</code>：</p> <p>store/index.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> defaultCity <span class="token operator">=</span> <span class="token string">&quot;北京&quot;</span>
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span>city<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        defaultCity <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>city<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        city<span class="token operator">:</span> defaultCity
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">changeCity</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                localStorage<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><hr> <p>现在我们看到 store/index.js 这个文件慢慢的变得复杂起来了，实际上，在真正的项目开发和之中，会做进一步的拆分，也就是把这个文件拆分为 State、Actions、Mutations，在 store 中创建一个文件叫 state.js（只存储公用数据），然后把设置默认数据的这块代码放进去，并通过 export 导出，内容就是在 index.js 中定义的 state 对象里的内容：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> defaultCity <span class="token operator">=</span> <span class="token string">&quot;北京&quot;</span>
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span>city<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        defaultCity <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>city<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    city<span class="token operator">:</span> defaultCity
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>接下来，只需要在 index.js 中 import state 就可以了：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> state <span class="token keyword">from</span> <span class="token string">&quot;./state&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token operator">:</span> state<span class="token punctuation">,</span>
+    mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">changeCity</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                localStorage<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>接着，在 store 目录下创建一个文件，叫做 mutations.js，然后把 index.js 中的 mutations 对象里的代码剪切进去：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">changeCity</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> city</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        state<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            localStorage<span class="token punctuation">.</span>city <span class="token operator">=</span> city<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>最终 index.js 就变成了这样：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> state <span class="token keyword">from</span> <span class="token string">&quot;./state&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> mutations <span class="token keyword">from</span> <span class="token string">&quot;./mutations&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token operator">:</span> state<span class="token punctuation">,</span>
+    mutations<span class="token operator">:</span> mutations
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>这样，我们就将 vuex 的代码拆分成了 State、Actions、Mutations 这几个部分，未来它的维护性也会得到比较大的提高。</p> <h3 id="_4-2-keep-alive"><a href="#_4-2-keep-alive" class="header-anchor">#</a> 4.2 keep-alive</h3> <p><strong>使用 keep-alive 优化网页性能</strong></p> <p>当写完城市列表响应代码，启动服务，打开页面，这样看不存在什么问题，基本的一些业务逻辑都已经实现了，但是在控制台中打开 Network 网络这个选项，选择 XHR，当初次进入首页的时候，请求了一个 index.json 的文件，然后切换到列表页，又请求了一个 city.json，然后再回到首页，index.json 又请求了一次，再次去列表页，city.json 又请求了一次，也就是，每一次路由发生变化的时候，Ajax 都会重新的被发送。</p> <img src="/code-girl/framework/project/img/keep-alive-1.png" alt="keep-alive-1"> <p>思考是什么原因导致这样的问题呢，打开 Home.vue 首页这个组件，每一次打开这个首页的时候，都会被重新的渲染，所以 mounted 这个钩子就会被重新的执行，那么这个 Ajax 数据就会被重新获取，那么这么能让它只获取一次呢？</p> <p>打开 main.js，可以看到入口组件是 App 这个组件，再打开 App.vue，router-view 显示的是当前地址所对应的内容，我们可以在外层包裹一个 keep-alive 的一个标签，他是 Vue 自带的一个标签，他的意思就是我的路由的内容被加载一次后，我就把路由中的内容放到内存之中，下一次再进入这个路由的时候，不需要重新渲染这个组件，去重新执行钩子函数，只要去内存里把以前的内容拿出来就可以。</p> <img src="/code-girl/framework/project/img/keep-alive-4.png" alt="keep-alive-4"> <p>这个时候，回到页面上，再打开 Network，进入到列表页，选择城市再返回首页，就不会再去加载 index.json 了，同样再进入列表页，也不会再去加载 city.json 了，他直接会从内存中调数据，而不会重新去法 Ajax 请求了。</p> <img src="/code-girl/framework/project/img/keep-alive-2.png" alt="keep-alive-2"> <p>这样还是存在逻辑上的问题的，当我在“北京”的时候，首页显示的是“北京”的内容，当切换为“上海”时，首页就应该显示“上海”的内容，所以城市发生改变的时候，首页还需要重新发一次 Ajax 请求，来获取不同城市的数据信息，我们对这一块做一个调整。</p> <p>打开 Home.vue 组件，改一下 axios 请求地址这里，在他的后面带一个参数，让他等于 Vuex 中存的当前的城市，所以还需要在 Home.vue 组件中引用 Vuex，<code>import { mapState } from &quot;vuex&quot;</code>，然后再加一个计算属性：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>computed<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'city'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>获取到城市对应的内容，然后就可以在发 Ajax 的时候，把 city 放在请求的参数里面：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;/api/index.json?city=&quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>getHomeInfoSucc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这个时候，我们打开页面，可以看到请求参数里已经携带了当前的城市：</p> <p>但是，例如当你切换了城市“桂林”，回到首页，并没有重新发 Ajax 请求，虽然上面的城市变成了“桂林”，但是底下的内容还是“北京”的内容，我们希望底下的内容跟着变，该怎么做呢？</p> <p>当我们在 App.vue 中用了 <code>keep-alive</code> 的时候，这块的内容已经被缓存起来了，他直接取得是缓存里的数据，那如何去改变缓存里的数据呢？当你使用 <code>keep-alive</code> 的时候，组件中会多出一个生命周期函数 <code>activted</code>，</p> <img src="/code-girl/framework/project/img/keep-alive-3.png" alt="keep-alive-3"> <p>可以在 mounted 和 activated 两个生命周期函数下打印一些内容，到浏览器上看一下他俩的执行：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;mounted&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHomeInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">activated</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;activted&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>打开页面，可以看到，mounted 和 activated 都会执行，当切换了城市，再回到首页的时候，组件的 mounted 就不会执行了，就只有 activated 会被执行，那么我们借助 activated 这个生命周期函数就可以实现我们想要的功能了。</p> <p>首先在页面被挂载的时候，也就是 mounted 中一定会去发一个 Ajax 请求，当页面重新被显示的时候，activated 一定会被重新的执行，那么我们就可以在页面每次重新显示的时候，可以判断当前页面上的城市和上次页面上显示的城市是否是相同的，如果不相同的，就再发一次 Ajax 请求。</p> <p>先在 data 中设置一个数据 <code>lastCity</code>，默认值是空，接着当页面被挂载的时候，让它等于 <code>this.city</code>，对上一次的城市做一个保存：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>lastCity <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHomeInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>当页面被重新激活的时候，我们在 activted 中这样写：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token function">activated</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>lastCity <span class="token operator">!=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>lastCity <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>city
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHomeInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果上一次的城市 lastCity 不等于当前城市的时候，就重新发一个 Ajax 请求，直接调用上面 <code>getHomeInfo</code> 方法就可以了。当上次的 city 和这次的 city 不一样时，还需要让他等于这次的 city。回到页面上，可以看到当切换的城市和上次的城市一样时，Ajax 就不会请求 city.json 了，当不一样时，才会去请求 city.json。</p> <p>回到代码里面，通过 activted 这样一个 keep-alive 新增的生命周期函数，结合 lastCity 这样一个临时缓存变量，就实现了首页代码性能优化的调整。</p> <blockquote><p>说明，本项目来源于Dell <a href="https://coding.imooc.com/class/203.html" target="_blank" rel="noopener noreferrer">Vue2.5开发去哪儿网App从零基础入门到实战项目<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <blockquote><p>本文的写作灵感与思路一部分来源于神三元的<a href="https://juejin.im/post/5d4f8f16f265da03d60ef131" target="_blank" rel="noopener noreferrer">react hooks+redux+immutable.js打造网易云音乐精美webApp<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Chrislin-jiang/code-girl/edit/master/docs/framework/project/1-Vue.js开发去哪儿网WebApp.md" target="_blank" rel="noopener noreferrer">编辑文档！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021年10月30日星期六晚上8点03分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/code-girl/framework/project/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/code-girl/framework/project/2-SpringBoot+Vue员工管理系统.html">
+        Spring Boot + Vue 开发前后端分离的员工管理系统
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/code-girl/assets/js/app.223cac8a.js" defer></script><script src="/code-girl/assets/js/2.d9d6c442.js" defer></script><script src="/code-girl/assets/js/68.bc22219a.js" defer></script><script src="/code-girl/assets/js/3.a7958272.js" defer></script>
+  </body>
+</html>
